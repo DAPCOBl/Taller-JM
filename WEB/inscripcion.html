@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Inscripción</title>
+  <link rel="stylesheet" type="text/css" href="styles.css">
+  <link rel="stylesheet" type="text/css" href="CSS/JS/alert.js">
+  <script src="script.js"></script>
+  <style>
+    .opciones {
+      display: none;
+    }
+  </style>
+</head>
+<body>
+  <section class="form">
+    <h1 class="h1T">Registrarse</h1>
+    <form method="POST">
+  
+  
+      <label for="nombre">Nombre:</label>
+      <input type="text" id="nombre" name="nombre" required>
+    
+      <label for="telefono">telefono:</label>
+      <input type="tel" id="telefono" name="telefono" required>
+    
+      <label for="correo">correo:</label>
+      <input type="text" id="correo" name="correo" required>
+  
+  
+  
+      <input type="submit" onclick="showAlertInscripcion()" href="login.htmle" value="Enviar">
+    </form>
+  </section>
+  
+  
+  <script>
+    function toggleOpciones(opcionesId) {
+      const opciones = document.getElementById(opcionesId);
+      opciones.classList.toggle("show");
+    }
+  
+    function seleccionarOpcion(opcion, inputId) {
+      const input = document.getElementById(inputId);
+      input.value = opcion;
+      toggleOpciones(inputId + "Opciones");
+    }
+  
+    function showAlertInscripcion() {
+      alert("Se ha regristado con exito.");
+    }
+  </script>
+  
+  <style>
+
+    .form{
+      background-color: #f2f2f2;
+      width: 40%;
+      height: 500px;
+    }
+
+    .h1T {
+      padding-top: 15%;
+      text-align: center;
+    }
+  
+    form {
+      width: 300px;
+      margin: 0 auto;
+    }
+  
+    label {
+      display: block;
+      margin-bottom: 5px;
+      font-weight: bold;
+    }
+  
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"] {
+      width: 100%;
+      padding: 5px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+  
+    input[type="submit"] {
+      width: 100%;
+      padding: 10px;
+      background-color:#FF6A00;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+  
+    input[type="submit"]:hover {
+      background-color: rgb(202, 119, 40);
+    }
+  
+    div {
+      position: relative;
+    }
+  
+    input[type="text"][readonly] {
+      cursor: pointer;
+      background-color: #f2f2f2;
+    }
+    
+    button {
+      position: absolute;
+      top: 0;
+      right: 0;
+      padding: 5px;
+      background-color: #ccc;
+      border: none;
+      border-radius: 0 4px 4px 0;
+      cursor: pointer;
+    }
+    
+    ul.opciones {
+      display: none;
+      list-style-type: none;
+      margin: 0;
+      padding: 0;
+      position: absolute;
+      top: 100%;
+      left: 0;
+      background-color: #fff;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    
+    ul.opciones li {
+      padding: 5px;
+      cursor: pointer;
+    }
+    
+    ul.opciones li:hover {
+      background-color: #f2f2f2;
+    }    
+  </style>
+  
+
+</body>
+</html>

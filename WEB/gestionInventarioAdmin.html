@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>SporTech</title>
+    <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
+    <link rel="stylesheet" href="CSS\style.css">
+    <link rel="stylesheet" href="CSS/invntario.css">
+    <link rel="stylesheet" href="CSS/horarioAdmin.css">
+    
+</head>
+<script src="//code.tidio.co/vncotjbuewn0u2pwiqwnemilv8acggqu.js" async></script>
+<body>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">GYM</h2>
+            </div>
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                  <h5><a href="indexADMIN.html" class="nav__links">Inicio</a></h5></a>
+                </li>
+            </ul>
+
+            <div class="nav__menu">
+                <img src=".IMG/LOGO.png" class="nav__img">
+            </div>
+        </nav>
+
+        <section class="hero__container container">
+            <h1 class="hero__title">SporTech</h1>
+            <p class="hero__paragraph"style = color:white;font-size:22px;>Aquí encontrarás equipos de calidad y entrenadores expertos para alcanzar tus metas.</p>
+        </section>
+    </header>
+  <section class="Plan__Gestion">
+    <section class="plan_container">
+      <h1 class="subtitle">Gestión de archivos</h1>
+
+      <div class="plan__table">
+          <div class="plan__element plan__element--best">
+              <h3 class="plan__plan">Exportar</h3>
+
+              <div class="plan__items">
+                  <input type="text" id="texto-archivo" placeholder="Ingrese su csv"/>
+                  <button id="exportar">Exportar</button>
+              </div>
+          </div>             
+      </div>
+      <div class="plan__table imp">
+          <div class="plan__element">
+              <h3 class="plan__plan">Importar</h3>
+              <div class="plan__items">
+                  <input type="file" id="archivo2" />
+              </div>
+          </div> 
+      </div>
+      <article class="tabla">
+          <div class="csv">
+          <div id="tablares"></div>
+          </div>
+      </article>
+      <h1 class="subtitle">DISEÑO</h1>
+      <table class="table1" style="margin-bottom: 0 !important;">
+          <tr id="header">
+            <th>Img del producto</th>
+            <th>Stock</th>
+            <th>Nombre</th>
+            <th>Módelo</th>
+            <th>Área</th>
+            <th>GUARDAR</th>
+          </tr>
+        
+          <tr>
+            <td><img src="CSS/IMG/Maq1.jpg" alt="Imagen 1"></td>
+            <td>
+              <div class="quantity">
+                <input step="1" min="1"max="20" name="quantity" value="11" title="Qty" class="input-text qty text" size="4" type="number">
+              </div>
+            </td>
+            <td>Máquina Tren superior biceps</td>
+            <td>F4KJE2KB</td>
+            <td>Cardio</td>
+            <td><button class="incrementButton">Incrementar</button></td>
+          </tr>
+        
+          <tr>
+            <td><img src="CSS/IMG/Maq2.png" alt="Imagen 4"></td>
+            <td>
+              <div class="quantity">
+                <input step="1" min="1"max="20" name="quantity" value="9" title="Qty" class="input-text qty text" size="4" type="number">
+              </div>
+            </td>
+            <td>Máquina Espalda superior completa</td>
+            <td>PHBS5CH3</td>
+            <td>Estiramiento</td>
+            <td><button class="incrementButton">Incrementar</button></td>
+          </tr>
+  
+          <tr>
+              <td><img src="CSS/IMG/Maq3.png" alt="Imagen 4"></td>
+              <td>
+                <div class="quantity">
+                  <input step="1" min="1"max="20" name="quantity" value="12" title="Qty" class="input-text qty text" size="4" type="number">
+                </div>
+              </td>
+              <td>Máquina Piernas peso inferior</td>
+              <td>IUE5T489</td>
+              <td>Fuerza</td>
+              <td><button class="incrementButton">Incrementar</button></td>
+            </tr>
+      </table>
+        
+      
+      <script>
+      const incrementButtons = document.querySelectorAll('.incrementButton');
+      const quantityInputs = document.querySelectorAll('.quantity input');
+      
+      incrementButtons.forEach((button, index) => {
+        button.addEventListener('click', function() {
+          let currentValue = parseInt(quantityInputs[index].value);
+          if (currentValue < 10) {
+            quantityInputs[index].value = currentValue + 1;
+          }
+        });
+      });
+      </script>
+      
+      
+      </table>
+      
+      <br>
+      <div id="GUARDAR" style="text-align: left;">
+        <button type="submit" formaction="login.html" title="GUARDAR" name="Guardar" onclick="mostrarAlertaGuardado()">Guardar</button>
+      </div>
+      
+      <script>
+      function mostrarAlertaGuardado() {
+        alert("El inventario se ha actualizado.");
+      }
+      </script>
+      
+      
+      <div id="ImprimirInforme" style="text-align: left;">
+        <button type="submit" formaction="login.html" title="ImprimirInforme" name="Imprimir Informe" onclick="mostrarAlerta()">Imprimir Informe</button>
+      </div>
+      
+      <script>
+        function mostrarAlerta() {
+          alert("Descargando informe de inventario");
+        }
+      </script>
+
+
+  </section>
+    <footer class="Plan__Foo">
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-section">
+            <h3>TÉRMINOS Y CONDICIONES DEL SERVICIO</h3>
+            <ul>
+              <li><i class="fas fa-phone"></i> Contrato Usuario 2023</li>
+              <li><i class="fas fa-envelope"></i> Contrato Usuario 2022</li>
+              <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2023</li>
+              <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2022</li>
+              <li><i class="fas fa-map-marker-alt"></i> Politica de privacidad</li>
+            </ul>
+          </div>
+          <div class="footer-section">
+            <h3>CONTACTO</h3>
+            <ul>
+              <li><i class="fas fa-phone"></i> 3208162801</li>
+              <li><i class="fas fa-envelope"></i> SporTech@servicio.com</li>
+              <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
+            </ul>
+          </div>
+        </div>
+        <div class="footer-bottom">
+          <p>&copy; 2023 Todos los derechos reservados | SporTech | By: Cristian</p>
+        </div>
+      </div>
+    </footer>
+
+  <script>
+    /**
+    * Exportar
+    **/
+    function exportar (data, fileName) {
+      const a = document.createElement("a");
+      const contenido = data,
+          blob = new Blob([contenido], {type: "octet/stream"}),
+          url = window.URL.createObjectURL(blob);
+      a.href = url;
+      a.download = fileName;
+      a.click();
+      window.URL.revokeObjectURL(url);
+      
+    };
+
+    document.querySelector('#exportar').onclick = function () {
+      const data = document.querySelector('#texto-archivo').value;
+      const nombreArchivo = 'ejemplo.txt'
+      exportar(data, nombreArchivo);
+    }
+
+    /**
+    * Importar y operar con .csv
+    **/
+    function crearTabla(data) {
+      const todasFilas = data.split(/\r?\n|\r/);
+      let tabla = '<table>';
+      for (let fila = 0; fila < todasFilas.length; fila++) {
+        if (fila === 0) {
+          tabla += '<thead>';
+          tabla += '<tr>';
+        } else {
+          tabla += '<tr>';
+        }
+        const celdasFila = todasFilas[fila].split(',');
+        for (let rowCell = 0; rowCell < celdasFila.length; rowCell++) {
+          if (fila === 0) {
+            tabla += '<th>';
+            tabla += celdasFila[rowCell];
+            tabla += '</th>';
+          } else {
+            tabla += '<td>';
+            tabla += celdasFila[rowCell];
+            tabla += '</td>';
+          }
+        }
+        if (fila === 0) {
+          tabla += '</tr>';
+          tabla += '</thead>';
+          tabla += '<tbody>';
+        } else {
+          tabla += '</tr>';
+        }
+      } 
+      tabla += '</tbody>';
+      tabla += '</table>';
+      document.querySelector('#tablares').innerHTML = tabla;
+    }
+    
+
+    function leerArchivo2(evt) {
+        let file = evt.target.files[0];
+        let reader = new FileReader();
+        
+        if (file) {
+          reader.onload = (e) => {
+            // Cuando el archivo se terminó de cargar
+            crearTabla(e.target.result);
+          };
+          // Leemos el contenido del archivo seleccionado
+          reader.readAsText(file);
+        }
+      }
+    document.querySelector('#archivo2')
+      .addEventListener('change', leerArchivo2, false);
+
+
+    /**
+     * Leer y mostrar contenido inmediatamente
+    **/  
+    function mostrarContenido(contenido) {
+        const elemento = document.getElementById('contenido-archivo');
+        elemento.innerHTML = contenido;
+      }
+    function leerArchivo(e) {
+      const archivo = e.target.files[0];
+      if (!archivo) {
+        return " ";
+      }
+      const lector = new FileReader();
+      lector.onload = function(e) {
+        const contenido = e.target.result;
+        mostrarContenido(contenido);
+      };
+      lector.readAsText(archivo);
+    }
+
+    document.querySelector('#archivo1')
+      .addEventListener('change', leerArchivo, false);
+  </script>
+</body>
+
+</html>
