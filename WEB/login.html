@@ -64,8 +64,136 @@
                     <hr>
                     <div class="pie-form">
                         <br>
-                        <a href="" onclick="showAlertRecuperacion()">RECUPERAR CUENTA</a>
-                        <a href="inscripcion.html">REGISTRAR</a>
+                        <a href="#" onclick="showAlertRecuperacion()">RECUPERAR CUENTA</a>
+                        <a href="#" id="registrarBtn">REGISTRAR</a>
+
+                        <section class="form1" id="modal1" style="display: none; background-color: #f2f2f2 !important;" >
+                        
+                        <h1 class="h1T">Registrarse</h1>
+                        <form>
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="nombre" name="nombre" required>
+                        
+                            <label for="telefono">Teléfono:</label>
+                            <input type="tel" id="telefono" name="telefono" required>
+                        
+                            <label for="correo">Correo:</label>
+                            <input type="email" id="correo" name="correo" required>
+                        
+                            <input type="submit" value="Enviar" onclick="hiddenRegister()">
+                        </form>
+                        </section>
+                        <script>
+                            const registrarBtn = document.getElementById('registrarBtn');
+                            const modal1 = document.getElementById('modal1');
+
+                            // Función para mostrar el modal
+                            function mostrarModal1() {
+                            modal1.style.display = 'block';
+                            }
+
+                            function hiddenRegister() {
+                            alert("Se ha regristado con exito.");
+                            modal1.style.display = 'none';
+                            }
+
+                            // Asignar evento clic al botón para mostrar el modal
+                            registrarBtn.addEventListener('click', mostrarModal1);
+                        </script>
+                        <style>
+                            .form{
+                            display: flex;
+                            background-color: #f2f2f2;
+                            width: 40%;
+                            height: 250px;
+                            }
+
+                            .h1T {
+                            margin-left: 10px;
+                            margin-right: 10px;
+                            margin-top: 20px;
+                            padding-top: 15px;
+                            text-align: center;
+                            }
+                        
+                            .form1 {
+                            height: 400px;
+                            border-radius: 3px;
+                            }
+                        
+                            label {
+                            display: block;
+                            margin-bottom: 5px;
+                            font-weight: bold;
+                            }
+                        
+                            input[type="text"],
+                            input[type="email"],
+                            input[type="tel"] {
+                            width: 100%;
+                            padding: 5px;
+                            margin-bottom: 10px;
+                            border: 1px solid #ccc;
+                            background-color: #ffffff;
+                            border-radius: 4px;
+                            }
+                        
+                            input[type="submit"] {
+                            width: 100%;
+                            padding: 10px;
+                            background-color:#FF6A00;
+                            color: white;
+                            border: none;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            }
+                        
+                            input[type="submit"]:hover {
+                            background-color: rgb(202, 119, 40);
+                            }
+                        
+                            div {
+                            position: relative;
+                            }
+                        
+                            input[type="text"][readonly] {
+                            cursor: pointer;
+                            background-color: #f2f2f2;
+                            }
+                            
+                            button {
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            padding: 5px;
+                            background-color: #ccc;
+                            border: none;
+                            border-radius: 0 4px 4px 0;
+                            cursor: pointer;
+                            }
+                            
+                            ul.opciones {
+                            display: none;
+                            list-style-type: none;
+                            margin: 0;
+                            padding: 0;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            background-color: #fff;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            }
+                            
+                            ul.opciones li {
+                            padding: 5px;
+                            cursor: pointer;
+                            }
+                            
+                            ul.opciones li:hover {
+                            background-color: #f2f2f2;
+                            }
+                        </style>
                         <br>
                     </div>
                 </div>

@@ -2,17 +2,16 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SporTech</title>
+    <title>Taller JM</title>
     <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/horarioAdmin.css">
 </head>
-<script src="//code.tidio.co/vncotjbuewn0u2pwiqwnemilv8acggqu.js" async></script>
 <body>
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <h2 class="nav__title">GYM</h2>
+                <h2 class="nav__title">JM - Admin</h2>
             </div>
             <ul class="nav__link nav__link--menu">
                 <li class="nav__items">
@@ -26,8 +25,8 @@
         </nav>
 
         <section class="hero__container container">
-            <h1 class="hero__title">SporTech</h1>
-            <p class="hero__paragraph"style = color:white;font-size:22px;>Aquí encontrarás equipos de calidad y entrenadores expertos para alcanzar tus metas.</p>
+            <h1 class="hero__title">Taller JM</h1>
+            <p class="hero__paragraph"style = color:white;font-size:22px;>Empresa especializada en las motocicletas, tanto la parte de mantenimiento y reparación, como el área de venta de repuestos y accesorios</p>
         </section>
     </header>
   <section class="Plan__Gestion">
@@ -51,91 +50,185 @@
               </div>
           </div> 
       </div>
-      <h1 class="subtitle">CARGA CSV</h1>
+
+      
+      
       <article class="tabla">
+        <div id="textDate" style="display: none;">
+          <h1 class="subtitle">DATOS CARGADOS</h1>
+        </div>
           <div class="csv">
           <div id="tablares"></div>
           </div>
       </article>
-      <h1 class="subtitle">DISEÑO</h1>
-      <table class="table1">
-        <tr id="header">
-          <th class="Plann__Column">Cambiar estado</th>
-          <th>Nombre</th>
-          <th>Apellido</th>
-          <th>Años</th>
-          <th>Plan</th>
-          <th>Sede</th>
-          <th>Género</th>
-          <th>Estado</th>
-        </tr>
-          <tr>
-            <td><input type="checkbox" id="checkbox1" checked></td>
-            <td>John</td>
-            <td>Gómez</td>
-            <td>25</td>
-            <td>VIP</td>
-            <td>BOGOTA</td>
-            <td>M</td>
-            <td>Activo</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox" id="checkbox2" checked></td>
-            <td>Steve</td>
-            <td>López</td>
-            <td>28</td>
-            <td>PRIN</td>
-            <td>BOGOTA</td>
-            <td>M</td>
-            <td>Activo</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox" id="checkbox3"></td>
-            <td>Simo</td>
-            <td>Rodríguez</td>
-            <td>26</td>
-            <td>AVAN</td>
-            <td>BOGOTA</td>
-            <td>M</td>
-            <td>Inactivo</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox" id="checkbox4" checked></td>
-            <td>Karina</td>
-            <td>Hernández</td>
-            <td>21</td>
-            <td>VIP</td>
-            <td>BOGOTA</td>
-            <td>F</td>
-            <td>Activo</td>
-          </tr>
-          <tr>
-            <td><input type="checkbox" id="checkbox5"></td>
-            <td>Sara</td>
-            <td>Martínez</td>
-            <td>20</td>
-            <td>PRIN</td>
-            <td>BOGOTA</td>
-            <td>F</td>
-            <td>Inactivo</td>
-          </tr>
-        </table>
+
+      <script>
+        function buscarJefe() {          
+        // Obtener el valor del texto ingresado en el campo de entrada
+        const textoIngresado = document.getElementById('inputBus').value;
         
-        <script>
-          const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+        // Texto de comparación definido en el código JavaScript
+        const textoComparacion = 'Paula';
+        
+        // Comparar los dos textos
+        if (textoIngresado === textoComparacion) {
+          document.querySelectorAll('.NoPaula').forEach(function(elemento) {
+                elemento.style.display = "none ";
+              });
+          alert("Jefe de bodega encontrado en la BD");
           
+        } else {
+          alert("Jefe de bodega NO encontrado en la BD");
+          document.querySelectorAll('.NoPaula').forEach(function(elemento) {
+                elemento.style.display = "";
+              });
+        }
+      }
+      </script>
+
+      <style>
+
+        .busq{
+          padding-right: 30px;
+          width: 30px;
+          padding: 10px;
+          margin-top: 15px;
+          height: 35px;
+
+          border-color: black;
+          border: 2px;
+        }
+
+        .buscar-codigo{
+            display: flex;
+            margin: 10px 0 20px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .buscar-codigo h4{
+            margin-right: 50px;
+        }
+
+        .buscar-codigo input{
+            padding-right: 30px;
+            width: 500px;
+            padding: 10px;
+            margin-top: 10px;
+            height: 35px;
+        }
+      </style>
+      <h1 class="subtitle">JEFE DE BODEGA</h1>
+      <div class="buscar-codigo">
+        <h4>Jefe Bodega</h4>
+        <input class="inputBus" id="inputBus" placeholder="Ingresa la cedula o nombre del jefe de bodega">
+        <div class="busq" onclick="buscarJefe()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </div>
+      </div>
+      <div>
+        <table class="table1">
+          <tr id="header">
+            <th>Cambiar estado</th>
+              <th>Nombre</th>
+              <th>Apellido</th>
+              <th>Cedula</th>
+              <th>Sede</th>
+              <th>Estado</th>
+              <th>Opcion</th>
+          </tr>          
+              <tr class="NoPaula">
+                <td><input type="checkbox" id="checkbox1"></td>
+                <td>Lucia</td>
+                <td>Suarez</td>
+                <td>69432681</td>
+                <td><select>
+                    <option value="USME46"selected>USME CLL 46</option>
+                    <option value="USME30">USME KR 30</option>
+                    <option value="BOGOTA">BOGOTA 1 MAYO</option>
+                  </select></td>
+                <td>Inactivo</td>
+                <td>
+                  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3" onclick = "deleteJefe(this)" viewBox="0 0 16 16">
+                    <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                  </svg>
+                </td>
+              </tr>
+            
+            <tr>
+              <td><input type="checkbox" id="checkbox2" checked></td>
+              <td>Paula</td>
+              <td>Herrera</td>
+              <td>109352079</td>
+              <td>
+                <select>
+                  <option value="USME46">USME CLL 46</option>
+                  <option value="USME30" selected>USME KR 30</option>
+                  <option value="BOGOTA">BOGOTA 1 MAYO</option>
+                </select>
+              </td>
+              <td>Activo</td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3" onclick = "deleteJefe(this)" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg>
+              </td>
+            </tr>
+            
+            <tr class="NoPaula">
+              <td><input type="checkbox" id="checkbox3" checked></td>
+              <td>Sara</td>
+              <td>Martínez</td>
+              <td>143298234</td>
+              <td>
+                <select>
+                  <option value="USME46">USME CLL 46</option>
+                  <option value="USME30">USME KR 30</option>
+                  <option value="BOGOTA" selected>BOGOTA 1 MAYO</option>
+                </select>
+              </td>
+              <td>Activo</td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3" onclick = "deleteJefe(this)" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg>
+              </td>
+            </tr>
+          </table>
+      </div>
+      
+        <script>  
+          const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+
           checkboxes.forEach(function(checkbox) {
             checkbox.addEventListener('change', function() {
-              const textoResultado = this.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
+              const estadoElement = this.parentNode.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling.nextElementSibling;
               if (this.checked) {
-                textoResultado.textContent = 'Activo';
+                estadoElement.textContent = 'Activo';
               } else {
-                textoResultado.textContent = 'Inactivo';
+                estadoElement.textContent = 'Inactivo';
               }
             });
           });
+                
+          function deleteJefe(element) {
+            element.parentNode.parentNode.style.display = "none";
+          }
+
         </script>
-        
+
+        <div id="GUARDAR" style="text-align: left;">
+        <button type="submit" formaction="login.html" title="GUARDAR" name="Guardar" onclick="mostrarAlertaGuardado()">Guardar</button>
+      </div>
+      
+      <script>
+      function mostrarAlertaGuardado() {
+        alert("Jefes actualizados.");
+      }
+      </script>
       
 
   </section>
@@ -156,13 +249,13 @@
             <h3>CONTACTO</h3>
             <ul>
               <li><i class="fas fa-phone"></i> 3208162801</li>
-              <li><i class="fas fa-envelope"></i> SporTech@servicio.com</li>
+              <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
               <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2023 Todos los derechos reservados | SporTech | By: Cristian</p>
+          <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
         </div>
       </div>
     </footer>
@@ -225,8 +318,12 @@
       tabla += '</tbody>';
       tabla += '</table>';
       document.querySelector('#tablares').innerHTML = tabla;
+      alert("Cargandos csv");
+      
+
+     document.getElementById("textDate").style.display = "block";
+
     }
-    
 
     function leerArchivo2(evt) {
         let file = evt.target.files[0];

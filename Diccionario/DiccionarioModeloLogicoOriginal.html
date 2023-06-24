@@ -79,7 +79,9 @@
 <li><a href='#tipoDocumento'>tipoDocumento</a></li>
 <li><a href='#tipoGarantia'>tipoGarantia</a></li>
 <li><a href='#tipoOrden'>tipoOrden</a></li>
-<li><a href='#tipoRepuesto'>tipoRepuesto</a></li>
+<li><a href='#tipoRepuesto'>tipoRepuesto</a></li>  
+<li><a href='#Sede'>Sede</a></li> 
+<li><a href='#categoria'>categoria</a></li>
 </ul>
 <!------------------------------------------------------------------------------------------------------------------------------------------------>
 <table id='Orden'>
@@ -129,49 +131,7 @@
 </tr>
 <tr>
     <td></td>
-    <td>precioTotal</td>
-    <td>DOUBLE</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Precio total de todos lo productos que van en la orden</td>
-</tr>
-<tr>
-    <td></td>
-    <td>cantidad</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Cantidad total de todos lo productos que van en la orden</td>
-</tr>
-<tr>
-    <td>FK</td>
-    <td>bodega_idBodega</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla bodega_idBodega (Id)</td>
-</tr>
-<tr>
-    <td>FK</td>
-    <td>tipoOrden_idTipoOrden</td>
+    <td>tipoOrden_idtipoOrden</td>
     <td>INT</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
@@ -183,6 +143,20 @@
     <td></td>
     <td>Llave foreanea de la tabla tipoOrden_idTipoOrden (Id)</td>
 </tr>
+</tr>
+    <td></td>
+    <td>proveedor_idProveedor</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+    
 <!------------------------------------------------------------------------------------------------------------------------------------------------>
 <table id='Orden_has_Usuario'>
 <caption>Orden_has_Usuario</caption>
@@ -234,7 +208,6 @@
 <caption>usuario</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
-    <th> </th>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
@@ -259,7 +232,7 @@
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td></td>
-    <td>Llave primaria de la tabla idUsuario (Id)</td>
+    <td>Llave primaria de la idUsuario (Id)</td>
 </tr>
 <tr>
     <td></td>
@@ -315,7 +288,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>User del Usuario</td>
+    <td>User del Jefe de bodega</td>
 </tr>
 <tr>
     <td></td>
@@ -343,14 +316,44 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Llave foreanea de la tabla rol_idRol (Id)</td>
-</tr>   
+    <td></td>
+
+</tr>
+<tr>
+    <td>PK</td>
+    <td>tipoEstado_idTipoEstado</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+
+</tr>
+<tr>
+    <td>PK</td>
+    <td>Sede_idSede</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
+
 <!------------------------------------------------------------------------------------------------------------------------------------------------>
 <table id='bodega'>
 <caption>bodega</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
-    <th></th>
+    <th> </th>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
@@ -375,10 +378,10 @@
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td></td>
-    <td>Llave primaria de la tabla idBodega (Id)</td>
+    <td>Llave primaria de la tabla idbodega (Id)</td>
 </tr>
 <tr>
-    <td></td>
+    <td> </td>
     <td>dirreccion</td>
     <td>VARCHAR(45)</td>
     <td>&nbsp;</td>
@@ -403,22 +406,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Stock de los repuestos de la bodega</td>
-</tr>
-<tr>
-    <td>FK</td>
-    <td>repuesto_idRepuesto</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla repuesto_idRepuesto (Id)</td>
-</tr>
+    <td>Stock de los productos de la bodega</td>
 <!------------------------------------------------------------------------------------------------------------------------------------------------>
 <table id='bodega_has_Usuario'>
 <caption>bodega_has_Usuario</caption>
@@ -452,7 +440,7 @@
     <td>Union de Llaves primarias,Llave primaria de la tabl a bodega_idBodega (Id)</td>
 </tr>
 <tr>
-    <td>PK</td>
+    <td>PH</td>
     <td>usuario_idUsuario</td>
     <td>INT</td>
     <td>&#10004;</td>
@@ -605,7 +593,7 @@
 </tr>
 <tr>
     <td>PK</td>
-    <td>idMarca</td>
+    <td>idMovimiento</td>
     <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
@@ -615,12 +603,12 @@
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td></td>
-    <td>Llave primaria de la tabla idMarca (Id)</td>
+    <td></td>
 </tr>
 <tr>
     <td></td>
-    <td>descripcion</td>
-    <td>VARCHAR(45)</td>
+    <td>fechaMovimiento</td>
+    <td>DATETIME</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td>&nbsp;</td>
@@ -629,8 +617,21 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Descripcion de la marca del producto</td>
+    <td></td>
 </tr>
+<tr>
+    <td>PH</td>
+    <td>bodega_idBodega</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td></td>
 <!------------------------------------------------------------------------------------------------------------------------------------------------>
 <table id='modelo'>
 <caption>modelo</caption>
@@ -707,7 +708,7 @@
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td></td>
-    <td></td>
+    <td>Llave primaria de la tabla idRepuesto (Id)</td>
 </tr>
 <tr>
     <td></td>
@@ -766,7 +767,35 @@
     <td>Precio del repuesto</td>
 </tr>
 <tr>
-    <td>FK</td>
+    <td></td>
+    <td>modelo</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla modelo_idModelo (Id)</td>
+</tr>
+<tr>
+    <td>PH</td>
+    <td>tipoGarantia_idTipoGarantia</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla tipoGarantia_idTipoGarantia (Id)</td>
+</tr>
+<tr>
+    <td>PH</td>
     <td>marca_idMarca</td>
     <td>INT</td>
     <td>&nbsp;</td>
@@ -780,35 +809,7 @@
     <td>Llave foreanea de la tabla marca_idMarca(Id)</td>
 </tr>
 <tr>
-    <td>FK</td>
-    <td>tipoRepuesto_idTipoRepuesto</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla tipoRepuesto_idTipoRepuesto (Id)</td>
-</tr>
-<tr>
-    <td>FK</td>
-    <td>modelo_idModelo</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla modelo_idModelo (Id)</td>
-</tr>
-<tr>
-    <td>FK</td>
+    <td>PH</td>
     <td>condicionRepuesto_idCondicionRepuesto</td>
     <td>INT</td>
     <td>&nbsp;</td>
@@ -822,8 +823,8 @@
     <td>Llave foreanea de la tabla condicionRepuesto_idCondicionRepuesto (Id)</td>
 </tr>
 <tr>
-    <td>FK</td>
-    <td>tipoGarantia_idTipoGarantia</td>
+    <td>PH</td>
+    <td>categoria_idCategoria</td>
     <td>INT</td>
     <td>&nbsp;</td>
     <td>&#10004;</td>
@@ -833,8 +834,7 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Llave foreanea de la tabla tipoGarantia_idTipoGarantia (Id)</td>
-</tr>
+    <td>Llave foreanea de la tabla categoria_idCategoria (Id)</td>
 <!------------------------------------------------------------------------------------------------------------------------------------------------>
 <table id='repuesto_has_devolucion'>
 <caption>repuesto_has_devolucion</caption>
@@ -857,7 +857,7 @@
     <td>PK</td>
     <td>repuesto_idRepuesto</td>
     <td>INT</td>
-    <td>&#10004;</td>
+    <td>&#10004;</td>   
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
@@ -911,7 +911,7 @@
     <td>&nbsp;</td>
     <td>&#10004;</td>
     <td></td>
-    <td>Llave primaria de la tabla idRol (Id)</td>
+    <td>Llave primaria de la tabla idRol(Id)</td>
 </tr>
 <tr>
     <td></td>
@@ -926,7 +926,7 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Descripcion del rol</td>
-</tr>
+
 <!------------------------------------------------------------------------------------------------------------------------------------------------>
 <table id='tipoDocumento'>
 <caption>tipoDocumento</caption>
@@ -1067,7 +1067,7 @@
 </tr>
 <tr>
     <td>PK</td>
-    <td>idTipoOrden</td>
+    <td>idtipoOrden</td>
     <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
@@ -1138,6 +1138,98 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Descripcion del Tipo de repuesto</td>
+    <tr>
+    </tr>
+
+    <table id='Sede'>
+        <caption>Sede</caption>
+        <tr><td colspan='11'></td></tr>
+        <tr>
+            <th>Columna</th>
+            <th>Tipo de dato</th>
+            <th><abbr title='Llave Primaria'>PK</abbr></th>
+            <th><abbr title='No Nulo'>NN</abbr></th>
+            <th><abbr title='Único'>UQ</abbr></th>
+            <th><abbr title='Binario'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Incremental'>AI</abbr></th>
+            <th>Default</th>
+            <th>Commentarios</th>
+        </tr>
+        <tr>
+            <td>PK</td>
+            <td>idSede</td>
+            <td>INT</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td></td>
+            <td></td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>descripcionSede</td>
+            <td>VARCHAR(45)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td></td>
+
+        </tr>
+        <table id='categoria'>
+        <caption>categoria</caption>
+        <tr><td colspan='11'></td></tr>
+        <tr>
+            <th>Columna</th>
+            <th>Tipo de dato</th>
+            <th><abbr title='Llave Primaria'>PK</abbr></th>
+            <th><abbr title='No Nulo'>NN</abbr></th>
+            <th><abbr title='Único'>UQ</abbr></th>
+            <th><abbr title='Binario'>BIN</abbr></th>
+            <th><abbr title='Unsigned'>UN</abbr></th>
+            <th><abbr title='Zero Fill'>ZF</abbr></th>
+            <th><abbr title='Auto Incremental'>AI</abbr></th>
+            <th>Default</th>
+            <th>Commentarios</th>
+        </tr>
+        <tr>
+            <td>PK</td>
+            <td>idCategoria</td>
+            <td>INT</td>
+            <td>&#10004;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td></td>
+            <td>Llave primaria de la idCategoria (Id)</td>
+        </tr>
+        <tr>
+            <td></td>
+            <td>descripcion</td>
+            <td>VARCHAR(45)</td>
+            <td>&nbsp;</td>
+            <td>&#10004;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td>&nbsp;</td>
+            <td class='attr'>&nbsp;</td>
+            <td></td>
+            <td>Descripcion de la categoria</td>
+
 </tr>
 </table>
 </body>

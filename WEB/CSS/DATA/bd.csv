@@ -1,7 +1,7 @@
-Cambiar estado,Nombre,Apellido,Telefono,Sede,Estado,
-<input type="checkbox" class="checkbox">,Lucia,Suarez,3208162801,USME,Inactivo
-<input type="checkbox" class="checkbox" checked>,Paula,Herrera,3208162801,USME,Activo
-<input type="checkbox" class="checkbox" checked>,Sara,Martínez,3208162801,USME,Activo
+Nombre,Apellido,Telefono,Sede,Estado,
+Lucia,Suarez,69432681,USME CLL 46,Inactivo
+Paula,Herrera,109352079,USME KR 30,Activo
+Sara,Martínez,143298234,BOGOTA 1 MAYO,Activo
 
 
 

@@ -27,23 +27,6 @@
                 }
                 </script>
                 </li>
-
-                <li class="nav__items">
-                    <h5><a class="nav__links" onclick="scrollToElement('.text')">Planes</a></h5>
-                <script>
-                function scrollToElement(className) {
-                var element = document.querySelector(className);
-                if (element) {
-                    window.scrollTo({
-                    top: element.offsetTop,
-                    behavior: 'smooth'
-                    });
-                }
-                }
-
-                </script>
-            
-                </li>
                 
                 <li class="nav__items">
                     <h5><a class="nav__links" onclick="scrollToElement('.plan__services')">Servicios</a></h5></a>
@@ -62,7 +45,7 @@
                 </li>
                 
                 <li class="nav__items">
-                    <h5><a class="nav__links" onclick="scrollToElement('.about')">Beneficios</a></h5></a>
+                    <h5><a class="nav__links" onclick="scrollToElement('.prod')">Productos</a></h5></a>
                 
                     <script>
                         function scrollToElement(className) {
@@ -87,7 +70,7 @@
             <h1 class="hero__title">Taller JM</h1>
             <p class="hero__paragraph"style = color:white;font-size:22px;>Empresa especializada en las motocicletas, tanto la parte de mantenimiento y reparación, como el área de venta de repuestos y accesorios</p>
                 <hr>
-                <a href="login.html" style = color:white class="cta">login</a>
+                <a href="login.html" title="Iniciar Sesión" style = color:white class="cta">Iniciar Sesión</a>
         </section>
     </header>
 
@@ -126,8 +109,44 @@
     </div>
 
 
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>PRODUCTOS DESTACADOS</h1>
+        </div>
+        <div class="galeria-port">
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod1.webp" alt="lahistoriasecretadelmundo">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod2.webp" alt="">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod3.webp" alt="">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod4.webp" alt="">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                </div>
+            </div>
+        </div>
+    </div>
 
-
+<div class="prod">
+    <h1>NUESTROS PRODUCTOS</h1>
     <div class = "catalogo">
         <div class = "filtro">
             <div class = "filtrar">
@@ -136,19 +155,8 @@
             <div class = "Marca">
                 <h4>Marca<br>
                     <div class="checkon">
-                        <input type="checkbox" id="Yamaha" onclick = "filtar()" value="Yamaha"/>
+                        <input type="checkbox" id="Yamaha" onclick = "filtrar()" value="Yamaha"/>
                         <label for="Yamaha">Yamaha</label><br>
-
-                        <script>
-                            function filtar()
-                            {
-                                let elementoModificado = document.querySelector("#filtroYamaha");
-                                elementoModificados.forEach(funtion(elemento),{
-                                    elementoModificado,innerHTML : "Yamaha-Enduro-Nuevo"
-                                });
-                            }
-                        </script>
-
                     </div>
                 <div class="checkon">
                     <input type="checkbox" class = "check" id="Honda"  value="Honda" />
@@ -198,103 +206,111 @@
 
         </div>
            <div class = "cards">
-                <div class = "card">
-                    <img src="CSS/IMG/Prod/prod1.webp" alt="">
-                    <div class = "info">
-                        <h5 >Enduro-Nuevo</h5>
-                        <h2>Amortiguadores Libero</h2>
-                        <h3>$121.000</h3>
-                         
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                <div class="NoYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod1.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Amortiguadores Libero</h2>
+                            <h3>$121.000</h3>
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class = "card">
-                    <img src="CSS/IMG/Prod/prod2.webp" alt="">
-                    <div class = "info">
-                        <h5 id="filtroYamaha">Enduro-Nuevo</h5>
-                        <h2>Kit De Arrastre Yamaha</h2>
-                        <h3>$129.500</h3>
-                      
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                <div class="ProdYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod2.webp" alt="">
+                        <div class = "info">
+                            <h5 id="filtroYamaha">Enduro-Nuevo</h5>
+                            <h2>Kit De Arrastre Yamaha</h2>
+                            <h3>$129.500</h3>
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class = "card">
-                    <img src="CSS/IMG/Prod/prod3.webp" alt="">
-                    <div class = "info">
-                        <h5 >Enduro-Nuevo</h5>
-                        <h2>Carburador Bws100</h2>
-                        <h3>$205.000</h3>
-                      
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                <div class="NoYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod3.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Carburador Bws100</h2>
+                            <h3>$205.000</h3>
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                 <div class = "card">
-                    <img src="CSS/IMG/Prod/prod4.webp" alt="">
-                    <div class = "info">
-                        <h5 id="filtroYamaha">Enduro-Nuevo</h5>
-                        <h2>Kit Cilindro Completo</h2>
-                        <h3>$268.000</h3>
-                      
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                <div class="ProdYamaha">
+                    <div class="card">
+                        <img src="CSS/IMG/Prod/prod4.webp" alt="">
+                        <div class="info">
+                            <h5 id="filtroYamaha1">Enduro-Nuevo</h5>
+                            <h2>Kit Cilindro Completo</h2>
+                            <h3>$268.000</h3>
+                            <button class="btn1">
+                                Ver producto
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class = "card">
-                    <img src="CSS/IMG/Prod/prod5.webp" alt="">
-                    <div class = "info">
-                        <h5 id="filtroYamaha">Enduro-Nuevo</h5>
-                        <h2>Exosto DTK / DT</h2>
-                        <h3>$388.000</h3>
-                      
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                <div class="ProdYamaha">
+                    <div class="card">
+                        <img src="CSS/IMG/Prod/prod5.webp" alt="">
+                        <div class="info">
+                            <h5 id="filtroYamaha2">Enduro-Nuevo</h5>
+                            <h2>Exosto DTK / DT</h2>
+                            <h3>$388.000</h3>
+                            <button class="btn1">
+                                Ver producto
+                            </button>
+                        </div>
                     </div>
                 </div>
-                <div class = "card">
-                    <img src="CSS/IMG/Prod/prod6.webp" alt="">
-                    <div class = "info">
-                        <h5 >Enduro-Nuevo</h5>
-                        <h2>Campana Trasera</h2>
-                        <h3>$247.000</h3>
-                      
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                <div class="NoYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod6.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Campana Trasera</h2>
+                            <h3>$247.000</h3>
+                          
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
-                <div class="cargar"  >
+                <div class="cargar NoYamaha"  >
                     <button class = "btnmas" id = "btnmas" onclick = "cargar()">
-                        Ver mas Productos
+                        Ver más Productos
                     </button>
                 </div>
                 <div class="mas" id = "mas">
-                <div class = "cardmas" id = "cardmas">
-                    <img src="CSS/IMG/Prod/prod7.webp" alt="">
-                    <div class = "info">
-                        <h5 >Enduro-Nuevo</h5>
-                        <h2>Bujía Iridium</h2>
-                        <h3>$70.000</h3>
-                      
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                <div class="NoYamaha">
+                    <div class = "cardmas" id = "cardmas">
+                        <img src="CSS/IMG/Prod/prod7.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Bujía Iridium</h2>
+                            <h3>$70.000</h3>
+                          
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
                     </div>
                 </div>
+                <div class="NoYamaha">
                 <div class = "cardmas" id = "cardmas">
                     <img src="CSS/IMG/Prod/prod8.webp" alt="">
                     <div class = "info">
@@ -307,29 +323,46 @@
                         </button>
                         </a>
                     </div>
+                     </div>
                 </div>
+                
         </div>
+<script>
+    function filtrar() {
+        let checkbox = document.getElementById("Yamaha");
+        let elementosModificados = document.querySelectorAll(".info h5[id^='filtroYamaha']");
+        
+        if (checkbox.checked) {
+            elementosModificados.forEach(function(elemento) {
+                elemento.innerHTML = "Yamaha-Enduro-Nuevo";
+            });
+            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
+                elemento.style.display = "none ";
+        });
+        } else {
+            elementosModificados.forEach(function(elemento) {
+                elemento.innerHTML = "Enduro-Nuevo";
+            });
+            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
+            elemento.style.display = "flex";
+            });
+            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
+                document.getElementById("NoYamaha").removeAttribute("display");
+            });
+        };
+    }
+    
+    function cargar(){
+        {
+            document.getElementById('btnmas').style.display = "none";
+            document.getElementById('mas').style.display = "flex";
+        }
+    }
+</script>
     </div>
 </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+</div>
+    
 
         <section class="plan__services">
             <h1 class="subtitle">SERVICIOS</h1>
@@ -355,8 +388,8 @@
                 <ul>
                   <li><img src="CSS/IMG/Estiramiento.jpg" class="imgServices"></li>
                   <li class="plan__servicesDescrip">
-                    <p class="servicesP">ZONA ESTIRAMIENTO</p>
-                    <div class="plan__servicesText"> <a>Área dedicada específicamente para realizar ejercicios de estiramiento. En esta área, los usuarios pueden realizar una serie de movimientos y técnicas diseñadas para mejorar la flexibilidad, aliviar la tensión muscular y prevenir lesiones</a></div>
+                    <p class="servicesP">Servicio de diagnostico</p>
+                    <div class="plan__servicesText"> <a>Nos encargamos de identificar una falla en específico o situaciones anormales donde elaboramos mediante procedimientos adecuados en los cuales plasmamos todos nuestros conocimientos como especialistas en mecánica. Llegamos a él enumerando y comprobando todas las posibles causas que llevan al mal funcionamiento o avería descrita.</a></div>
                   </li>
                 </ul>
             </div>
@@ -367,9 +400,40 @@
             <div class="Plan__Grupal__container container">
                 <div class="Plan__Grupal__Text">
                     <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
-                    <p class="hero__paragraph">Son fundamentales para asegurar que el taller tenga acceso os necesarios para llevar a cabo las reparaciones y el himiento de las motocicletas de manera eficiente.</p>
-                    <a class="Plan__Grupalcta">Ver proveedores</a>
-                </div>
+                    <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de manera eficiente. </p>
+                    
+                    <button  class="Plan__Grupalcta" id="Plan__Grupalcta" onclick = "verList()">
+                        Ver proveedores
+                    </button>
+                    <div id="list" style="display: none;">
+                        <ul id="proveedoresList" style="display: flex;">
+                            <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png" onclick="llevarAuteco()"></li>
+                            <li class="spac"><img src="CSS/IMG/Proveedores/honda.png" onclick="llevarHonda()"></li>
+                            <li><img src="CSS/IMG/Proveedores/BAJAB.png" onclick="llevarBajab()"></li>
+                          </ul>
+                    </div>
+                  </div>
+
+                  <script>
+                    function llevarAuteco(){
+                        location.href="https://www.auteco.com.co/";
+                    }
+
+                    function llevarHonda(){
+                        location.href="https://motos.honda.com.co";
+                    }
+
+                    function llevarBajab(){
+                        location.href="https://colombia.globalbajaj.com/";
+                    }
+
+                    function verList(){
+                        {
+                            document.getElementById('Plan__Grupalcta').style.display = "none";
+                            document.getElementById('list').style.display = "block";
+                        }
+                    }
+                  </script>
 
                 <figure class="Plan__Grupal__picture">
                     <img src="CSS/IMG/ClaseGrupal.webp" class="Plan__Grupal__img">
@@ -377,6 +441,7 @@
             </div>
         </section>
         <footer>
+            <img src="">
             <div class="container">
               <div class="footer-content">
                 <div class="footer-section">
@@ -402,21 +467,7 @@
                 <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
               </div>
             </div>
-          </footer>      
-    <script>
-        function cargar()
-        {
-            document.getElementById('btnmas').style.display = "none";
-            document.getElementById('mas').style.display = "flex";
-        }
-
-        
-    </script>
-
-<!---let elementoModificado = document.querySelector("#filtroYamaha");
-            elementoModificados.forEach(funtion(elemento), {elementoModificado,innerHTML : "Yamaha-Enduro-Nuevo" });-->
-            
-
+          </footer>           
           
 </body>
 </html>

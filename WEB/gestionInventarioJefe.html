@@ -9,29 +9,57 @@
     <link rel="stylesheet" href="CSS/horarioAdmin.css">
     
 </head>
+<script src="//code.tidio.co/vncotjbuewn0u2pwiqwnemilv8acggqu.js" async></script>
 <body>
-  <header class="hero">
-      <nav class="nav container">
-          <div class="nav__logo">
-              <h2 class="nav__title">JM - Admin</h2>
-          </div>
-          <ul class="nav__link nav__link--menu">
-              <li class="nav__items">
-                <h5><a href="indexADMIN.html" class="nav__links">Inicio</a></h5></a>
-              </li>
-          </ul>
+    <header class="hero">
+        <nav class="nav container">
+            <div class="nav__logo">
+                <h2 class="nav__title">GYM</h2>
+            </div>
+            <ul class="nav__link nav__link--menu">
+                <li class="nav__items">
+                  <h5><a href="indexADMIN.html" class="nav__links">Inicio</a></h5></a>
+                </li>
+            </ul>
 
-          <div class="nav__menu">
-              <img src=".IMG/LOGO.png" class="nav__img">
-          </div>
-      </nav>
+            <div class="nav__menu">
+                <img src=".IMG/LOGO.png" class="nav__img">
+            </div>
+        </nav>
 
-      <section class="hero__container container">
-          <h1 class="hero__title">Taller JM</h1>
-          <p class="hero__paragraph"style = color:white;font-size:22px;>Empresa especializada en las motocicletas, tanto la parte de mantenimiento y reparación, como el área de venta de repuestos y accesorios</p>
-      </section>
-  </header>
-      <h1 class="subtitle">Gestión de repuestos</h1>
+        <section class="hero__container container">
+            <h1 class="hero__title">SporTech</h1>
+            <p class="hero__paragraph"style = color:white;font-size:22px;>Aquí encontrarás equipos de calidad y entrenadores expertos para alcanzar tus metas.</p>
+        </section>
+    </header>
+  <section class="Plan__Gestion">
+    <section class="plan_container">
+      <h1 class="subtitle">Gestión de archivos</h1>
+
+      <div class="plan__table">
+          <div class="plan__element plan__element--best">
+              <h3 class="plan__plan">Exportar</h3>
+
+              <div class="plan__items">
+                  <input type="text" id="texto-archivo" placeholder="Ingrese su csv"/>
+                  <button id="exportar">Exportar</button>
+              </div>
+          </div>             
+      </div>
+      <div class="plan__table imp">
+          <div class="plan__element">
+              <h3 class="plan__plan">Importar</h3>
+              <div class="plan__items">
+                  <input type="file" id="archivo2" />
+              </div>
+          </div> 
+      </div>
+      <article class="tabla">
+          <div class="csv">
+          <div id="tablares"></div>
+          </div>
+      </article>
+      <h1 class="subtitle">DISEÑO</h1>
       <table class="table1" style="margin-bottom: 0 !important;">
           <tr id="header">
             <th>Img del producto</th>
@@ -152,6 +180,107 @@
       </div>
     </footer>
 
+  <script>
+    /**
+    * Exportar
+    **/
+    function exportar (data, fileName) {
+      const a = document.createElement("a");
+      const contenido = data,
+          blob = new Blob([contenido], {type: "octet/stream"}),
+          url = window.URL.createObjectURL(blob);
+      a.href = url;
+      a.download = fileName;
+      a.click();
+      window.URL.revokeObjectURL(url);
+      
+    };
+
+    document.querySelector('#exportar').onclick = function () {
+      const data = document.querySelector('#texto-archivo').value;
+      const nombreArchivo = 'ejemplo.txt'
+      exportar(data, nombreArchivo);
+    }
+
+    /**
+    * Importar y operar con .csv
+    **/
+    function crearTabla(data) {
+      const todasFilas = data.split(/\r?\n|\r/);
+      let tabla = '<table>';
+      for (let fila = 0; fila < todasFilas.length; fila++) {
+        if (fila === 0) {
+          tabla += '<thead>';
+          tabla += '<tr>';
+        } else {
+          tabla += '<tr>';
+        }
+        const celdasFila = todasFilas[fila].split(',');
+        for (let rowCell = 0; rowCell < celdasFila.length; rowCell++) {
+          if (fila === 0) {
+            tabla += '<th>';
+            tabla += celdasFila[rowCell];
+            tabla += '</th>';
+          } else {
+            tabla += '<td>';
+            tabla += celdasFila[rowCell];
+            tabla += '</td>';
+          }
+        }
+        if (fila === 0) {
+          tabla += '</tr>';
+          tabla += '</thead>';
+          tabla += '<tbody>';
+        } else {
+          tabla += '</tr>';
+        }
+      } 
+      tabla += '</tbody>';
+      tabla += '</table>';
+      document.querySelector('#tablares').innerHTML = tabla;
+    }
+    
+
+    function leerArchivo2(evt) {
+        let file = evt.target.files[0];
+        let reader = new FileReader();
+        
+        if (file) {
+          reader.onload = (e) => {
+            // Cuando el archivo se terminó de cargar
+            crearTabla(e.target.result);
+          };
+          // Leemos el contenido del archivo seleccionado
+          reader.readAsText(file);
+        }
+      }
+    document.querySelector('#archivo2')
+      .addEventListener('change', leerArchivo2, false);
+
+
+    /**
+     * Leer y mostrar contenido inmediatamente
+    **/  
+    function mostrarContenido(contenido) {
+        const elemento = document.getElementById('contenido-archivo');
+        elemento.innerHTML = contenido;
+      }
+    function leerArchivo(e) {
+      const archivo = e.target.files[0];
+      if (!archivo) {
+        return " ";
+      }
+      const lector = new FileReader();
+      lector.onload = function(e) {
+        const contenido = e.target.result;
+        mostrarContenido(contenido);
+      };
+      lector.readAsText(archivo);
+    }
+
+    document.querySelector('#archivo1')
+      .addEventListener('change', leerArchivo, false);
+  </script>
 </body>
 
 </html>

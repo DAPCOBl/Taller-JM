@@ -33,18 +33,7 @@
   </section>
   
   
-  <script>
-    function toggleOpciones(opcionesId) {
-      const opciones = document.getElementById(opcionesId);
-      opciones.classList.toggle("show");
-    }
-  
-    function seleccionarOpcion(opcion, inputId) {
-      const input = document.getElementById(inputId);
-      input.value = opcion;
-      toggleOpciones(inputId + "Opciones");
-    }
-  
+  <script> 
     function showAlertInscripcion() {
       alert("Se ha regristado con exito.");
     }
@@ -53,9 +42,10 @@
   <style>
 
     .form{
+      display: flex;
       background-color: #f2f2f2;
       width: 40%;
-      height: 500px;
+      height: 250px;
     }
 
     .h1T {

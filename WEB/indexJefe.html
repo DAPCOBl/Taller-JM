@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/JS/scroll.js">
 </head>
-<script src="//code.tidio.co/vncotjbuewn0u2pwiqwnemilv8acggqu.js" async></script>
 <body>
     <header class="hero">
         <nav class="nav container">
@@ -81,58 +80,262 @@
             </div>
         </div>
     </div>
-   
-        <section class="text">
-            <h1 class="subtitle">CONOCE NUESTROS MEJORES PLANES</h1>
-            <iframe class="tables" src="tables.html" style="overflow: hidden;" scrolling="no"></iframe>
-        </section>
-        <section class="plan_container">
-            <h1 class="subtitle">SUPLEMENTOS</h1>
-            <div class="plan__table">
-                <div class="plan__element">
-                    <h3 class="plan__plan">Zona fit</h3>
-                    <hr class="hr">
-                    <div class="plan__marca">
-                        <h3>PRE-ENTRENO</h3>
-                    </div>
-                    <div class="plan__items">
-                        <p class="plan__features">N.O XPLODE</p>
-                        <p class="plan__features">VENOM 40 SERV</p>
-                        <p class="plan__features">INTENCE PROSCIENCE</p>
-                    </div>
-                    <div class="plan__marca">
-                        <h3>RECUPERADORES</h3>
-                    </div>
-                    <div class="plan__items">
-                        <p class="plan__features">CREATINE POWDER</p>
-                        <p class="plan__features">GLUTAMINA ULTRA</p>
-                        <p class="plan__features">CREATINE MICRONIZED</p>
-                    </div>
-                    <a href="https://zonafit.co/shop/" class="plan__cta">Más Información</a>
+
+
+    <div class="contenedor">
+        <div class="titulo">
+            <h1>PRODUCTOS DESTACADOS</h1>
+        </div>
+        <div class="galeria-port">
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod1.webp" alt="lahistoriasecretadelmundo">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
                 </div>
-                    <div class="plan__element">
-                        <h3 class="plan__plan">Medellin fit</h3>
-                        <hr class="hr">
-                        <div class="plan__marca">
-                            <h3>PROTEÍNAS</h3>
-                        </div>
-                        <div class="plan__items">
-                            <p class="plan__features">ISO 100</p>
-                            <p class="plan__features">NITRO-TECH</p>
-                            <p class="plan__features">ISOPURE</p>
-                        </div>
-                        <div class="plan__marca">
-                            <h3>GANADORES DE PESO</h3>
-                        </div>
-                        <div class="plan__items">
-                            <p class="plan__features">MASS-TECH</p>
-                            <p class="plan__features">TRUE MASS</p>
-                            <p class="plan__features">BULK MUSCLE</p>
-                        </div>
-                        <a href="https://medellinfit.com/" class="plan__cta">Más Información</a>
-                    </div>
             </div>
-        </section>
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod2.webp" alt="">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod3.webp" alt="">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                </div>
+            </div>
+            <div class="imagen-port">
+                <img src="CSS/IMG/Prod/prod4.webp" alt="">
+                <div class="hover-galeria">
+                    <img src="CSS/IMG/icono1.png" alt="">
+                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                </div>
+            </div>
+        </div>
+    </div>
+
+<div class="prod">
+    <h1>NUESTROS PRODUCTOS</h1>
+    <div class = "catalogo">
+        <div class = "filtro">
+            <div class = "filtrar">
+                <h2>FILTRAR POR</h2>
+            </div>
+            <div class = "Marca">
+                <h4>Marca<br>
+                    <div class="checkon">
+                        <input type="checkbox" id="Yamaha" onclick = "filtrar()" value="Yamaha"/>
+                        <label for="Yamaha">Yamaha</label><br>
+                    </div>
+                <div class="checkon">
+                    <input type="checkbox" class = "check" id="Honda"  value="Honda" />
+                    <label for="Honda">Honda</label><br>
+                </div>
+                <div class="checkon">
+                    <input type="checkbox" id="Apache"  value="Apache" />
+                    <label for="Apache">Apache</label><br>
+                </div>
+                </h4>
+            </div>
+
+            <div class = "Categoria">
+                <h4>Categoria<br>
+                <div class="checkon">
+                    <input type="checkbox" class = "check" id="Trail"  value="Trail" />
+                    <label for="Trail">Trail</label><br>
+                </div>
+                <div class="checkon">
+                    <input type="checkbox" id="Enduro" checked value="Enduro" />
+                    <label for="Enduro">Enduro</label><br>
+                </div>
+                <div class="checkon">
+                    <input type="checkbox" id="Pista"  value="Pista" />
+                    <label for="Pista">Pista</label><br>
+                </div>
+                </h4>
+            </div>
+            <div class = "Condicion">
+                <h4>Condicion<br>
+                    <div class="checkon">
+                        <input type="checkbox" class = "check" id="Nuevos" checked value="Nuevos" />
+                        <label for="Nuevos">Nuevos</label><br>
+                    </div>
+                <div class="checkon">
+                    <input type="checkbox" id="Usado"  value="Usado" />
+                    <label for="Usado">Usado</label><br>
+                </div>
+                <div class="checkon">
+                    <input type="checkbox" id="Reacondicionado"  value="Reacondicionado" />
+                    <label for="Reacondicionado">Reacondicionado</label><br>
+                </div>
+                </h4>
+            </div>
+
+
+
+        </div>
+           <div class = "cards">
+                <div class="NoYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod1.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Amortiguadores Libero</h2>
+                            <h3>$121.000</h3>
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ProdYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod2.webp" alt="">
+                        <div class = "info">
+                            <h5 id="filtroYamaha">Enduro-Nuevo</h5>
+                            <h2>Kit De Arrastre Yamaha</h2>
+                            <h3>$129.500</h3>
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="NoYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod3.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Carburador Bws100</h2>
+                            <h3>$205.000</h3>
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="ProdYamaha">
+                    <div class="card">
+                        <img src="CSS/IMG/Prod/prod4.webp" alt="">
+                        <div class="info">
+                            <h5 id="filtroYamaha1">Enduro-Nuevo</h5>
+                            <h2>Kit Cilindro Completo</h2>
+                            <h3>$268.000</h3>
+                            <button class="btn1">
+                                Ver producto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="ProdYamaha">
+                    <div class="card">
+                        <img src="CSS/IMG/Prod/prod5.webp" alt="">
+                        <div class="info">
+                            <h5 id="filtroYamaha2">Enduro-Nuevo</h5>
+                            <h2>Exosto DTK / DT</h2>
+                            <h3>$388.000</h3>
+                            <button class="btn1">
+                                Ver producto
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                <div class="NoYamaha">
+                    <div class = "card">
+                        <img src="CSS/IMG/Prod/prod6.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Campana Trasera</h2>
+                            <h3>$247.000</h3>
+                          
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="cargar NoYamaha"  >
+                    <button class = "btnmas" id = "btnmas" onclick = "cargar()">
+                        Ver más Productos
+                    </button>
+                </div>
+                <div class="mas" id = "mas">
+                <div class="NoYamaha">
+                    <div class = "cardmas" id = "cardmas">
+                        <img src="CSS/IMG/Prod/prod7.webp" alt="">
+                        <div class = "info">
+                            <h5 >Enduro-Nuevo</h5>
+                            <h2>Bujía Iridium</h2>
+                            <h3>$70.000</h3>
+                          
+                            <button class = "btn1">
+                                Ver producto
+                            </button>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <div class="NoYamaha">
+                <div class = "cardmas" id = "cardmas">
+                    <img src="CSS/IMG/Prod/prod8.webp" alt="">
+                    <div class = "info">
+                        <h5 >Enduro-Nuevo</h5>
+                        <h2>Correa Motor</h2>
+                        <h3>$148.000</h3>
+                      
+                        <button class = "btn1">
+                            Ver producto
+                        </button>
+                        </a>
+                    </div>
+                     </div>
+                </div>
+                
+        </div>
+<script>
+    function filtrar() {
+        let checkbox = document.getElementById("Yamaha");
+        let elementosModificados = document.querySelectorAll(".info h5[id^='filtroYamaha']");
+        
+        if (checkbox.checked) {
+            elementosModificados.forEach(function(elemento) {
+                elemento.innerHTML = "Yamaha-Enduro-Nuevo";
+            });
+            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
+                elemento.style.display = "none ";
+        });
+        } else {
+            elementosModificados.forEach(function(elemento) {
+                elemento.innerHTML = "Enduro-Nuevo";
+            });
+            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
+            elemento.style.display = "flex";
+            });
+            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
+                document.getElementById("NoYamaha").removeAttribute("display");
+            });
+        };
+    }
+    
+    function cargar(){
+        {
+            document.getElementById('btnmas').style.display = "none";
+            document.getElementById('mas').style.display = "flex";
+        }
+    }
+</script>
+    </div>
+</div>
+</div>
+    
 
         <section class="plan__services">
             <h1 class="subtitle">SERVICIOS</h1>
@@ -140,8 +343,8 @@
                 <ul>
                   <li><img src="CSS/IMG/Peso.jpg" class="imgServices"></li>
                   <li class="plan__servicesDescrip">
-                    <p class="servicesP">ZONA CARDIO</p>
-                    <div class="plan__servicesText"> <a>Área dedicada específicamente a los ejercicios cardiovasculares, el propósito principal realizar entrenamientos cardiovasculares efectivos y mejorar su salud cardiovascular en un entorno controlado y seguro.</a></div>
+                    <p class="servicesP">Mantenimiento programado</p>
+                    <div class="plan__servicesText"> <a>Nos encargamos de cambios de aceite, cambios de titros de aire y de aceite, ajustes de la cadena de transmisión, ajustes de válvulas limpieza de carburadores o inyectores, y revision general del sistema de frenos</a></div>
                   </li>
                 </ul>
             </div>
@@ -149,8 +352,8 @@
                 <ul>
                   <li><img src="CSS/IMG/Fuerza.jpg" class="imgServices"></li>
                   <li class="plan__servicesDescrip">
-                    <p class="servicesP">ZONA FUERZA</p>
-                    <div class="plan__servicesText"> <a>Área dedicada específicamente al entrenamiento de fuerza, donde los usuarios  tiene dispositivos diseñados para fortalecer y desarrollar los músculos del cuerpo.</a></div>
+                    <p class="servicesP">Reparaciones mecánicas</p>
+                    <div class="plan__servicesText"> <a>Nos encargamos de reparación o reemplazo de piezas defectuosas a desgastadas, ajustes de motor, reparación de sistemas de transmisión, reparación de sistemas de escape, reparación de sistemas de suspensión, y solución de problemas eléctricas</a></div>
                   </li>
                 </ul>
             </div>              
@@ -158,8 +361,8 @@
                 <ul>
                   <li><img src="CSS/IMG/Estiramiento.jpg" class="imgServices"></li>
                   <li class="plan__servicesDescrip">
-                    <p class="servicesP">ZONA ESTIRAMIENTO</p>
-                    <div class="plan__servicesText"> <a>Área dedicada específicamente para realizar ejercicios de estiramiento. En esta área, los usuarios pueden realizar una serie de movimientos y técnicas diseñadas para mejorar la flexibilidad, aliviar la tensión muscular y prevenir lesiones</a></div>
+                    <p class="servicesP">Servicio de diagnostico</p>
+                    <div class="plan__servicesText"> <a>Nos encargamos de identificar una falla en específico o situaciones anormales donde elaboramos mediante procedimientos adecuados en los cuales plasmamos todos nuestros conocimientos como especialistas en mecánica. Llegamos a él enumerando y comprobando todas las posibles causas que llevan al mal funcionamiento o avería descrita.</a></div>
                   </li>
                 </ul>
             </div>
@@ -169,44 +372,49 @@
         <section class="Plan__Grupal">
             <div class="Plan__Grupal__container container">
                 <div class="Plan__Grupal__Text">
-                    <h2 class="subtitle">Ven a nuestras clases grupales</h2>
-                    <p class="hero__paragraph">sesiones de ejercicio que se realizan en grupo, guiadas por un instructor o entrenador.
-                         Estas clases suelen tener una duración predeterminada y están diseñadas para ofrecer beneficios físicos y sociales 
-                         a los participantes.</p>
-                    <a href="horarioCliente.html" class="Plan__Grupalcta">Ver Clases</a>
-                </div>
+                    <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
+                    <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de manera eficiente. </p>
+                    
+                    <button  class="Plan__Grupalcta" id="Plan__Grupalcta" onclick = "verList()">
+                        Ver proveedores
+                    </button>
+                    <div id="list" style="display: none;">
+                        <ul id="proveedoresList" style="display: flex;">
+                            <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png" onclick="llevarAuteco()"></li>
+                            <li class="spac"><img src="CSS/IMG/Proveedores/honda.png" onclick="llevarHonda()"></li>
+                            <li><img src="CSS/IMG/Proveedores/BAJAB.png" onclick="llevarBajab()"></li>
+                          </ul>
+                    </div>
+                  </div>
+
+                  <script>
+                    function llevarAuteco(){
+                        location.href="https://www.auteco.com.co/";
+                    }
+
+                    function llevarHonda(){
+                        location.href="https://motos.honda.com.co";
+                    }
+
+                    function llevarBajab(){
+                        location.href="https://colombia.globalbajaj.com/";
+                    }
+
+                    function verList(){
+                        {
+                            document.getElementById('Plan__Grupalcta').style.display = "none";
+                            document.getElementById('list').style.display = "block";
+                        }
+                    }
+                  </script>
 
                 <figure class="Plan__Grupal__picture">
                     <img src="CSS/IMG/ClaseGrupal.webp" class="Plan__Grupal__img">
                 </figure>
             </div>
         </section>
-        <section class="container about">
-            <h2 class="subtitle">BENEFICIOS</h2>
-            <div class="about__main">
-                <article class="aboutIcons1">
-                    <img src="CSS/IMG/Fisica.jpg" class="aboutIcons1">
-                    <h3 class="about__title">Condición física</h3>
-                    <p class="about__paragrah"> El gimnasio ofrece un entorno propicio para realizar ejercicios físicos y mejorar la condición cardiovascular, la fuerza muscular, la resistencia y la flexibilidad. Al realizar entrenamientos regulares en el gimnasio, puedes fortalecer tu sistema cardiovascular, reducir el riesgo de enfermedades
-                         crónicas como la obesidad, la diabetes tipo 2 y enfermedades cardíacas, y mejorar la salud en general.</p>
-                </article>
-
-                <article class="aboutIcons2">
-                    <img src="CSS/IMG/Mental.jpg" class="aboutIcons2">
-                    <h3 class="about__title">Salud mental</h3>
-                    <p class="about__paragrah">El ejercicio físico regular en el gimnasio no solo beneficia el cuerpo, sino también la mente. El ejercicio libera endorfinas, sustancias químicas que promueven el estado de ánimo positivo y reducen el estrés y la ansiedad. Además, el gimnasio puede ser un lugar social donde interactúas con otras personas que comparten intereses 
-                        similares, lo que puede mejorar tu bienestar emocional y brindarte un sentido de comunidad y apoyo.</p>
-                </article>
-
-                <article class="aboutIcons3">
-                    <img src="CSS/IMG/PesoCorporal.jpg" class="aboutIcons3">
-                    <h3 class="about__title">Peso corporal</h3>
-                    <p class="about__paragrah">El gimnasio es un lugar ideal para llevar a cabo entrenamientos de quema de calorías y control del peso. A través de una combinación de ejercicios cardiovasculares y de fuerza, es posible aumentar la quema de calorías, construir músculo magro y mantener un peso corporal saludable. Además, 
-                        la actividad física regular en el gimnasio puede ayudar a acelerar el metabolismo y mejorar la composición corporal.</p>
-                </article>
-            </div>
-        </section>
         <footer>
+            <img src="">
             <div class="container">
               <div class="footer-content">
                 <div class="footer-section">
@@ -223,15 +431,16 @@
                   <h3>CONTACTO</h3>
                   <ul>
                     <li><i class="fas fa-phone"></i> 3208162801</li>
-                    <li><i class="fas fa-envelope"></i> SporTech@servicio.com</li>
+                    <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
                     <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
                   </ul>
                 </div>
               </div>
               <div class="footer-bottom">
-                <p>&copy; 2023 Todos los derechos reservados | SporTech | By: Cristian</p>
+                <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
               </div>
             </div>
-        </footer>     
+          </footer>           
+          
 </body>
 </html>
