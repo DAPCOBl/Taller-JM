@@ -3,92 +3,752 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="author" content="DicDat" />
+    <link rel="shortcut icon" href="LOGO.png" type="image/x-icon">
     <meta name="description" content="BD mydb" />
-    <title>Diccionario BD</title>
+    <title>mydb Diccionario</title>
     <style type="text/css">
     
-    *{
-        text-decoration: none;
-    }
-
-    table{
-        width: 100%;
-        margin-bottom: 30px;
-    }
-    abbr{
-        cursor: help;
-    }
-    table, td, th{
-        border-style: solid;
-        border-width: 1px;
-    }
-    table caption{
-        font-size: 120%;
-        font-weight: bold;
-    }
-    caption{
-        color: black;
-    }
-    td, th{
-        border-color: silver;
-    }
-    tr:hover{
-        color: #35576e;
-        background-color: #F2F2F2;
-    }
-    th{
-        background-color: rgb(17, 13, 77);
-        color: #ffffff;
-    }
-    td{
-        color: rgb(61, 56, 56);
-    }
-    ul{
-        font-style: italic;
-    }
-    #title-sect{
-        color: rgb(17, 13, 77);
-        text-align: right;
-    }
-    .proj-desc{
-        text-align: right;
-    }
-    </style>
-</head>
-<body>
-<div id="title-sect">
-<h1> Diccionario de Datos Taller JM</h1>
-<p class="proj-desc">
-<em></em>
-</p>
-</div>
-<h2>Índice</h2>
+        *{
+            text-decoration: none;
+        }
+    
+        table{
+            width: 100%;
+            margin-bottom: 30px;
+        }
+        abbr{
+            cursor: help;
+        }
+        table, td, th{
+            border-style: solid;
+            border-width: 1px;
+        }
+        table caption{
+            font-size: 120%;
+            font-weight: bold;
+        }
+        caption{
+            color: black;
+        }
+        td, th{
+            border-color: silver;
+        }
+        tr:hover{
+            color: #35576e;
+            background-color: #F2F2F2;
+        }
+        th{
+            background-color: rgb(17, 13, 77);
+            color: #ffffff;
+        }
+        td{
+            color: rgb(61, 56, 56);
+        }
+        ul{
+            font-style: italic;
+        }
+        #title-sect{
+            color: rgb(17, 13, 77);
+            text-align: right;
+        }
+        .proj-desc{
+            text-align: right;
+        }
+        </style>
+    </head>
+    <body>
+    <div id="title-sect">
+    <h1> Diccionario de Datos Taller JM</h1>
+    <p class="proj-desc">
+    <em></em>
+    </p>
+    </div>
+    <h2>Índice</h2>
 <ul>
-<li><a href='#Orden'>Orden</a></li>
-<li><a href='#Orden_has_Usuario'>Orden_has_Usuario</a></li>
-<li><a href='#Usuario'>Usuario</a></li>
+<li><a href='#Sede'>Sede</a></li>
 <li><a href='#bodega'>bodega</a></li>
-<li><a href='#bodega_has_Usuario'>bodega_has_Usuario</a></li>
+<li><a href='#categoria'>categoria</a></li>
 <li><a href='#condicionRepuesto'>condicionRepuesto</a></li>
+<li><a href='#detalleBodega'>detalleBodega</a></li>
+<li><a href='#detalleDevolucion'>detalleDevolucion</a></li>
+<li><a href='#detalleOrden'>detalleOrden</a></li>
 <li><a href='#devolucion'>devolucion</a></li>
 <li><a href='#marca'>marca</a></li>
-<li><a href='#modelo'>modelo</a></li>
+<li><a href='#movimiento'>movimiento</a></li>
+<li><a href='#movimientoDetalle'>movimientoDetalle</a></li>
+<li><a href='#orden'>orden</a></li>
+<li><a href='#proveedor'>proveedor</a></li>
 <li><a href='#repuesto'>repuesto</a></li>
-<li><a href='#repuesto_has_devolucion'>repuesto_has_devolucion</a></li>
 <li><a href='#rol'>rol</a></li>
 <li><a href='#tipoDocumento'>tipoDocumento</a></li>
+<li><a href='#tipoEstado'>tipoEstado</a></li>
 <li><a href='#tipoGarantia'>tipoGarantia</a></li>
 <li><a href='#tipoOrden'>tipoOrden</a></li>
-<li><a href='#tipoRepuesto'>tipoRepuesto</a></li>  
-<li><a href='#Sede'>Sede</a></li> 
-<li><a href='#categoria'>categoria</a></li>
+<li><a href='#usuario'>usuario</a></li>
+<li><a href='#usuario_has_bodega'>usuario_has_bodega</a></li>
 </ul>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='Orden'>
+
+
+
+<table id='Sede'>
+<caption>Sede</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idSede</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idSede (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcionSede</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de la sede</td>
+</tr>
+
+
+
+<table id='bodega'>
+<caption>bodega</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idBodega</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idbodega (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>dirreccion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Direccion unica de la bodega</td>
+</tr>
+<tr>
+    <td></td>
+    <td>stockBodega</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Stock de los productos de la bodega</td>
+</tr>
+
+
+
+<table id='categoria'>
+<caption>categoria</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idCategoria</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la idCategoria (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de la categoria</td>
+</tr>
+
+
+
+<table id='condicionRepuesto'>
+<caption>condicionRepuesto</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idCondicionRepuesto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idcondicionRepuesto (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de la condicion del producto</td>
+</tr>
+
+
+
+<table id='detalleBodega'>
+<caption>detalleBodega</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>repuesto_idRepuesto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla repuesto_idRepuesto (Id)</td>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>bodega_idBodega</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla bodega_idBodega (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>stock</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Stock o unidades del inventario</td>
+</tr>
+
+
+
+<table id='detalleDevolucion'>
+<caption>detalleDevolucion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>repuesto_idRepuesto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla repuesto_idRepuesto (Id)</td>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>devolucion_idDevolucion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla devolucion_idDevolucion (Id)</td>
+</tr>
+
+
+
+<table id='detalleOrden'>
+<caption>detalleOrden</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>orden_idOrden</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla Orden_idOrden (Id)</td>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>repuesto_idRepuesto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla repuesto_idRepuesto (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>precioTotal</td>
+    <td>DOUBLE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Precio total de todos lo productos que van en la orden</td>
+</tr>
+<tr>
+    <td></td>
+    <td>cantidad</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Cantidad total de todos lo productos que van en la orden</td>
+</tr>
+
+
+
+<table id='devolucion'>
+<caption>devolucion</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idDevolucion</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idDevolucion (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>fechaDevolucion</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Fecha del dia que se realiza la devolución</td>
+</tr>
+<tr>
+    <td></td>
+    <td>motivoDevolucion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Motivo del porque se realiza la devolución</td>
+</tr>
+<tr>
+    <td></td>
+    <td>estadoDevolucion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Estado del proceso de la devolución</td>
+</tr>
+
+
+
+<table id='marca'>
+<caption>marca</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idMarca</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idmarca (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion de la marca del producto</td>
+</tr>
+
+
+
+<table id='movimiento'>
+<caption>movimiento</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idMovimiento</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idMovimiento (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>fechaMovimiento</td>
+    <td>DATETIME</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Fecha del dia q se realiza el movimiento</td>
+</tr>
+<tr>
+    <td>FK</td>
+    <td>bodega_idBodega</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla bodega_idBodega (Id)</td>
+</tr>
+
+
+
+<table id='movimientoDetalle'>
+<caption>movimientoDetalle</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>repuesto_idRepuesto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla repuesto_idRepuesto (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>cantidadRepuestos</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Cantidad total de todos lo productos que van a transladar</td>
+</tr>
+<tr>
+    <td></td>
+    <td>precioRepuesto</td>
+    <td>DOUBLE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Precio total de todos lo productos que van a transladar</td>
+</tr>
+<tr>
+    <td>FK</td>
+    <td>movimiento_idMovimiento</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla movimiento_idMovimiento (Id)</td>
+</tr>
+
+
+
+<table id='orden'>
 <caption>orden</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
-    <th> </th>
+    <th></th>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
@@ -130,7 +790,7 @@
     <td>Fecha del dia que se entrega la orden </td>
 </tr>
 <tr>
-    <td></td>
+    <td>FK</td>
     <td>tipoOrden_idtipoOrden</td>
     <td>INT</td>
     <td>&nbsp;</td>
@@ -143,8 +803,8 @@
     <td></td>
     <td>Llave foreanea de la tabla tipoOrden_idTipoOrden (Id)</td>
 </tr>
-</tr>
-    <td></td>
+<tr>
+    <td>FK</td>
     <td>proveedor_idProveedor</td>
     <td>INT</td>
     <td>&nbsp;</td>
@@ -155,14 +815,16 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
-    
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='Orden_has_Usuario'>
-<caption>Orden_has_Usuario</caption>
+    <td>Llave foreanea de la tabla proveedor_idProveedor (Id)</td>
+</tr>
+
+
+
+<table id='proveedor'>
+<caption>proveedor</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
-    <th> </th>
+    <th></th>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
@@ -177,7 +839,7 @@
 </tr>
 <tr>
     <td>PK</td>
-    <td>orden_idOrden</td>
+    <td>idProveedor</td>
     <td>INT</td>
     <td>&#10004;</td>
     <td>&#10004;</td>
@@ -185,12 +847,282 @@
     <td>&nbsp;</td>
     <td>&nbsp;</td>
     <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idProveedor (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcionProveedor</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Union de Llaves primarias,Llave primaria de la tabla Orden_idOrden (Id)</td>
+    <td>Descripcion del proveedor</td>
+</tr>
+
+
+
+<table id='repuesto'>
+<caption>repuesto</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
 </tr>
 <tr>
     <td>PK</td>
+    <td>idRepuesto</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idRepuesto (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>nombre</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Nombre del repuesto</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion del repuesto</td>
+</tr>
+<tr>
+    <td></td>
+    <td>referencia</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Referencia del repuesto</td>
+</tr>
+<tr>
+    <td></td>
+    <td>precio</td>
+    <td>DOUBLE</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Precio del repuesto</td>
+</tr>
+<tr>
+    <td>FK</td>
+    <td>modelo</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla modelo_idModelo (Id)</td>
+</tr>
+<tr>
+    <td>FK</td>
+    <td>tipoGarantia_idTipoGarantia</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla tipoGarantia_idTipoGarantia (Id)</td>
+</tr>
+<tr>
+    <td>FK</td>
+    <td>marca_idMarca</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla marca_idMarca(Id)</td>
+</tr>
+<tr>
+    <td>FK</td>
+    <td>condicionRepuesto_idCondicionRepuesto</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla condicionRepuesto_idCondicionRepuesto (Id)</td>
+</tr>
+<tr>
+    <td>FK</td>
+    <td>categoria_idCategoria</td>
+    <td>INT</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Llave foreanea de la tabla categoria_idCategoria (Id)</td>
+</tr>
+
+
+
+<table id='rol'>
+<caption>rol</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idRol</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idRol(Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcionRol</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion del rol</td>
+</tr>
+
+
+
+<table id='tipoDocumento'>
+<caption>tipoDocumento</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idTipoDocumento</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla tipoDocumento (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion del tipo de documento</td>
+</tr>
+<tr>
+    <td>FK</td>
     <td>usuario_idUsuario</td>
     <td>INT</td>
     <td>&#10004;</td>
@@ -201,13 +1133,174 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td>Union de Llaves primarias,Llave primaria de la tabla usuario_idUsuario (Id)</td>
+    <td>Relacion directa de llave primaria,Llave primaria de la tabla usuario_idUsuario (Id)</td>
 </tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='Usuario'>
+
+
+
+<table id='tipoEstado'>
+<caption>tipoEstado</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idTipoEstado</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idTipoEstado (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcionTipoEstado</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion del tipo de estado</td>
+</tr>
+
+
+
+<table id='tipoGarantia'>
+<caption>tipoGarantia</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idTipoGarantia</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idTipoGarantia (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcionTipoGarantia</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion del Tipo de Garantia</td>
+</tr>
+<tr>
+    <td></td>
+    <td>duracion</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Duración del Tipo de Garantia</td>
+</tr>
+
+
+
+<table id='tipoOrden'>
+<caption>tipoOrden</caption>
+<tr><td colspan='11'></td></tr>
+<tr>
+    <th></th>
+    <th>Columna</th>
+    <th>Tipo de dato</th>
+    <th><abbr title='Llave Primaria'>PK</abbr></th>
+    <th><abbr title='No Nulo'>NN</abbr></th>
+    <th><abbr title='Único'>UQ</abbr></th>
+    <th><abbr title='Binario'>BIN</abbr></th>
+    <th><abbr title='Unsigned'>UN</abbr></th>
+    <th><abbr title='Zero Fill'>ZF</abbr></th>
+    <th><abbr title='Auto Incremental'>AI</abbr></th>
+    <th>Default</th>
+    <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>idtipoOrden</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td></td>
+    <td>Llave primaria de la tabla idTipoOrden (Id)</td>
+</tr>
+<tr>
+    <td></td>
+    <td>descripcionTipoOrden</td>
+    <td>VARCHAR(45)</td>
+    <td>&nbsp;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Descripcion del Tipo de órden</td>
+</tr>
+
+
+
+<table id='usuario'>
 <caption>usuario</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
+    <th></th>
     <th>Columna</th>
     <th>Tipo de dato</th>
     <th><abbr title='Llave Primaria'>PK</abbr></th>
@@ -316,11 +1409,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
-
+    <td>Llave foreanea de la tabla rol_idRol (Id)</td>
 </tr>
 <tr>
-    <td>PK</td>
+    <td>FK</td>
     <td>tipoEstado_idTipoEstado</td>
     <td>INT</td>
     <td>&nbsp;</td>
@@ -331,11 +1423,10 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
-
+    <td>Llave foreanea de la tabla tipoEstado_idTipoEstado (Id)</td>
 </tr>
 <tr>
-    <td>PK</td>
+    <td>FK</td>
     <td>Sede_idSede</td>
     <td>INT</td>
     <td>&nbsp;</td>
@@ -346,70 +1437,13 @@
     <td>&nbsp;</td>
     <td class='attr'>&nbsp;</td>
     <td></td>
-    <td></td>
+    <td>Llave foreanea de la tabla Sede_idSede (Id)</td>
+</tr>
 
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='bodega'>
-<caption>bodega</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th> </th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idBodega</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idbodega (Id)</td>
-</tr>
-<tr>
-    <td> </td>
-    <td>dirreccion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Direccion unica de la bodega</td>
-</tr>
-<tr>
-    <td> </td>
-    <td>stockBodega</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Stock de los productos de la bodega</td>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='bodega_has_Usuario'>
-<caption>bodega_has_Usuario</caption>
+
+
+<table id='usuario_has_bodega'>
+<caption>usuario_has_bodega</caption>
 <tr><td colspan='11'></td></tr>
 <tr>
     <th></th>
@@ -424,6 +1458,20 @@
     <th><abbr title='Auto Incremental'>AI</abbr></th>
     <th>Default</th>
     <th>Commentarios</th>
+</tr>
+<tr>
+    <td>PK</td>
+    <td>usuario_idUsuario</td>
+    <td>INT</td>
+    <td>&#10004;</td>
+    <td>&#10004;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td>&nbsp;</td>
+    <td class='attr'>&nbsp;</td>
+    <td></td>
+    <td>Union de Llaves primarias,Llave primaria de la tabla usuario_idUsuario (Id)</td>
 </tr>
 <tr>
     <td>PK</td>
@@ -438,798 +1486,6 @@
     <td class='attr'>&nbsp;</td>
     <td></td>
     <td>Union de Llaves primarias,Llave primaria de la tabl a bodega_idBodega (Id)</td>
-</tr>
-<tr>
-    <td>PH</td>
-    <td>usuario_idUsuario</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Union de Llaves primarias,Llave primaria de la tabla usuario_idUsuario (Id)</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='condicionRepuesto'>
-<caption>condicionRepuesto</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idCondicionRepuesto</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idCondicionRepuesto (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion de la condicion del producto</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='devolucion'>
-<caption>devolucion</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idDevolucion</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idDevolucion (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>fechaDevolucion</td>
-    <td>DATETIME</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Fecha del dia que se realiza la devolución</td>
-</tr>
-<tr>
-    <td></td>
-    <td>motivoDevolucion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Motivo del porque se realiza la devolución</td>
-</tr>
-<tr>
-    <td></td>
-    <td>estadoDevolucion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Estado del proceso de la devolución</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='marca'>
-<caption>marca</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idMovimiento</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td></td>
-    <td>fechaMovimiento</td>
-    <td>DATETIME</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-</tr>
-<tr>
-    <td>PH</td>
-    <td>bodega_idBodega</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td></td>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='modelo'>
-<caption>modelo</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idModelo</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idModelo (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion del modelo del producto</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='repuesto'>
-<caption>repuesto</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idRepuesto</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idRepuesto (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>nombre</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Nombre del repuesto</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion del repuesto</td>
-</tr>
-<tr>
-    <td></td>
-    <td>referencia</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Referencia del repuesto</td>
-</tr>
-<tr>
-    <td></td>
-    <td>precio</td>
-    <td>DOUBLE</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Precio del repuesto</td>
-</tr>
-<tr>
-    <td></td>
-    <td>modelo</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla modelo_idModelo (Id)</td>
-</tr>
-<tr>
-    <td>PH</td>
-    <td>tipoGarantia_idTipoGarantia</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla tipoGarantia_idTipoGarantia (Id)</td>
-</tr>
-<tr>
-    <td>PH</td>
-    <td>marca_idMarca</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla marca_idMarca(Id)</td>
-</tr>
-<tr>
-    <td>PH</td>
-    <td>condicionRepuesto_idCondicionRepuesto</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla condicionRepuesto_idCondicionRepuesto (Id)</td>
-</tr>
-<tr>
-    <td>PH</td>
-    <td>categoria_idCategoria</td>
-    <td>INT</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Llave foreanea de la tabla categoria_idCategoria (Id)</td>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='repuesto_has_devolucion'>
-<caption>repuesto_has_devolucion</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>repuesto_idRepuesto</td>
-    <td>INT</td>
-    <td>&#10004;</td>   
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Union de Llaves primarias,Llave primaria de la tabla repuesto_idRepuesto (Id)</td>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>devolucion_idDevolucion</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Union de Llaves primarias,Llave primaria de la tabla devolucion_idDevolucion (Id)</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='rol'>
-<caption>rol</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idRol</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idRol(Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcionRol</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion del rol</td>
-
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='tipoDocumento'>
-<caption>tipoDocumento</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idTipoDocumento</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla tipoDocumento (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion del tipo de documento</td>
-</tr>
-<tr>
-    <td>FK</td>
-    <td>usuario_idUsuario</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Relacion directa de llave primaria,Llave primaria de la tabla usuario_idUsuario (Id)</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='tipoGarantia'>
-<caption>tipoGarantia</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idTipoGarantia</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idTipoGarantia (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcionTipoGarantia</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion del Tipo de Garantia</td>
-</tr>
-<tr>
-    <td></td>
-    <td>duracion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Duración del Tipo de Garantia</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='tipoOrden'>
-<caption>tipoOrden</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idtipoOrden</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idTipoOrden (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcionTipoOrden</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion del Tipo de órden</td>
-</tr>
-<!------------------------------------------------------------------------------------------------------------------------------------------------>
-<table id='tipoRepuesto'>
-<caption>tipoRepuesto</caption>
-<tr><td colspan='11'></td></tr>
-<tr>
-    <th></th>
-    <th>Columna</th>
-    <th>Tipo de dato</th>
-    <th><abbr title='Llave Primaria'>PK</abbr></th>
-    <th><abbr title='No Nulo'>NN</abbr></th>
-    <th><abbr title='Único'>UQ</abbr></th>
-    <th><abbr title='Binario'>BIN</abbr></th>
-    <th><abbr title='Unsigned'>UN</abbr></th>
-    <th><abbr title='Zero Fill'>ZF</abbr></th>
-    <th><abbr title='Auto Incremental'>AI</abbr></th>
-    <th>Default</th>
-    <th>Commentarios</th>
-</tr>
-<tr>
-    <td>PK</td>
-    <td>idTipoRepuesto</td>
-    <td>INT</td>
-    <td>&#10004;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td></td>
-    <td>Llave primaria de la tabla idTipoRepuesto (Id)</td>
-</tr>
-<tr>
-    <td></td>
-    <td>descripcion</td>
-    <td>VARCHAR(45)</td>
-    <td>&nbsp;</td>
-    <td>&#10004;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-    <td class='attr'>&nbsp;</td>
-    <td></td>
-    <td>Descripcion del Tipo de repuesto</td>
-    <tr>
-    </tr>
-
-    <table id='Sede'>
-        <caption>Sede</caption>
-        <tr><td colspan='11'></td></tr>
-        <tr>
-            <th>Columna</th>
-            <th>Tipo de dato</th>
-            <th><abbr title='Llave Primaria'>PK</abbr></th>
-            <th><abbr title='No Nulo'>NN</abbr></th>
-            <th><abbr title='Único'>UQ</abbr></th>
-            <th><abbr title='Binario'>BIN</abbr></th>
-            <th><abbr title='Unsigned'>UN</abbr></th>
-            <th><abbr title='Zero Fill'>ZF</abbr></th>
-            <th><abbr title='Auto Incremental'>AI</abbr></th>
-            <th>Default</th>
-            <th>Commentarios</th>
-        </tr>
-        <tr>
-            <td>PK</td>
-            <td>idSede</td>
-            <td>INT</td>
-            <td>&#10004;</td>
-            <td>&#10004;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&#10004;</td>
-            <td></td>
-            <td></td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>descripcionSede</td>
-            <td>VARCHAR(45)</td>
-            <td>&nbsp;</td>
-            <td>&#10004;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td class='attr'>&nbsp;</td>
-            <td></td>
-            <td></td>
-
-        </tr>
-        <table id='categoria'>
-        <caption>categoria</caption>
-        <tr><td colspan='11'></td></tr>
-        <tr>
-            <th>Columna</th>
-            <th>Tipo de dato</th>
-            <th><abbr title='Llave Primaria'>PK</abbr></th>
-            <th><abbr title='No Nulo'>NN</abbr></th>
-            <th><abbr title='Único'>UQ</abbr></th>
-            <th><abbr title='Binario'>BIN</abbr></th>
-            <th><abbr title='Unsigned'>UN</abbr></th>
-            <th><abbr title='Zero Fill'>ZF</abbr></th>
-            <th><abbr title='Auto Incremental'>AI</abbr></th>
-            <th>Default</th>
-            <th>Commentarios</th>
-        </tr>
-        <tr>
-            <td>PK</td>
-            <td>idCategoria</td>
-            <td>INT</td>
-            <td>&#10004;</td>
-            <td>&#10004;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&#10004;</td>
-            <td></td>
-            <td>Llave primaria de la idCategoria (Id)</td>
-        </tr>
-        <tr>
-            <td></td>
-            <td>descripcion</td>
-            <td>VARCHAR(45)</td>
-            <td>&nbsp;</td>
-            <td>&#10004;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td>&nbsp;</td>
-            <td class='attr'>&nbsp;</td>
-            <td></td>
-            <td>Descripcion de la categoria</td>
-
 </tr>
 </table>
 </body>
