@@ -53,43 +53,10 @@
       }
       </script>
 
-      <style>
-
-        .busq{
-          padding-right: 30px;
-          width: 30px;
-          padding: 10px;
-          margin-top: 15px;
-          height: 35px;
-
-          border-color: black;
-          border: 2px;
-        }
-
-        .buscar-codigo{
-            display: flex;
-            margin: 10px 0 20px;
-            text-align: center;
-            align-items: center;
-            justify-content: center;
-        }
-
-        .buscar-codigo h4{
-            margin-right: 50px;
-        }
-
-        .buscar-codigo input{
-            padding-right: 30px;
-            width: 500px;
-            padding: 10px;
-            margin-top: 10px;
-            height: 35px;
-        }
-      </style>
       <h1 class="subtitle">JEFE DE BODEGA</h1>
       <div class="buscar-codigo">
         <h4>Jefe Bodega</h4>
-        <input class="inputBus" id="inputBus" placeholder="Ingresa la cedula o nombre del jefe de bodega">
+        <input class="inputBus" id="inputBus" placeholder="Ingresa nombre del jefe de bodega">
         <div class="busq" onclick="buscarJefe()">
           <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
           <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
@@ -102,8 +69,9 @@
             <th>Cambiar estado</th>
               <th>Nombre</th>
               <th>Apellido</th>
-              <th>Cedula</th>
+              <th>Celular</th>
               <th>Sede</th>
+              <th>correo</th>
               <th>Estado</th>
               <th>Opcion</th>
           </tr>          
@@ -112,6 +80,7 @@
                 <td>Lucia</td>
                 <td>Suarez</td>
                 <td>69432681</td>
+                <td>empleado@gmail.com</td>
                 <td><select>
                     <option value="USME46"selected>USME CLL 46</option>
                     <option value="USME30">USME KR 30</option>
@@ -130,6 +99,7 @@
               <td>Paula</td>
               <td>Herrera</td>
               <td>109352079</td>
+              <td>empleado@gmail.com</td>
               <td>
                 <select>
                   <option value="USME46">USME CLL 46</option>
@@ -150,6 +120,7 @@
               <td>Sara</td>
               <td>Martínez</td>
               <td>143298234</td>
+              <td>empleado@gmail.com</td>
               <td>
                 <select>
                   <option value="USME46">USME CLL 46</option>

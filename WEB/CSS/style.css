@@ -771,6 +771,7 @@ footer {
     font-size: 20px;
     padding: 10px;
 }
+
 input[type="checkbox" i] {
     cursor: pointer;
     margin: 0 11px 0 0;
@@ -990,4 +991,108 @@ input[type="checkbox" i] {
 }
 /*************************************************************************/
 
+.busq{
+    padding-right: 30px;
+    width: 30px;
+    padding: 10px;
+    margin-top: 15px;
+    height: 35px;
 
+    border-color: black;
+    border: 2px;
+  }
+
+  .buscar-codigo{
+      display: flex;
+      margin: 10px 0 20px;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+  }
+
+  .buscar-codigo h4{
+      margin-right: 50px;
+  }
+
+  .buscar-codigo input{
+      padding-right: 30px;
+      width: 500px;
+      padding: 10px;
+      margin-top: 10px;
+      height: 35px;
+  }
+
+/*************************************************************************/
+
+.editRepuesto{
+    display: none;
+    background-color: #dab18c;
+    width: 1000px;
+    height: 400px;
+    margin: auto;
+}
+
+.contenedor-add{
+    width: 100%;
+    margin-top: 0;
+    margin: 40px;
+}
+
+.Descripcion-producto{
+    width: 100%;
+}
+
+.Contenedor-inputs{
+    display: flex;
+    width: 100%;
+}
+
+.Contenedor-inputs .inputsN input{
+    height: 30px;
+    width: 420px;
+}
+
+.Contenedor-inputs input{
+    height: 30px;
+    width: 200px;
+}
+
+.Contenedor-inputs .inputsN{
+    font-weight: 300;
+    width: 44%;
+    display: grid;
+}
+
+.Contenedor-inputs .inputs{
+    font-weight: 300;
+    width: 22%;
+    display: grid;
+}
+
+.Contenedor-btn{
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin: 40px 2px;
+    margin-right: 400px;
+}
+
+.btnCan{
+    background-color: #ff5757;
+}
+
+.btnAgre,
+.btnCan{
+    height: 40px;
+    padding: 15px;
+    color: #000;
+    align-items: center;
+    margin: 0 20px 0 0;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.Agre{
+    margin-top: 30px;
+}

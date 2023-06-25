@@ -2,151 +2,454 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SporTech</title>
+    <title>Taller JM</title>
     <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/invntario.css">
     <link rel="stylesheet" href="CSS/horarioAdmin.css">
     
 </head>
-<script src="//code.tidio.co/vncotjbuewn0u2pwiqwnemilv8acggqu.js" async></script>
 <body>
-    <header class="hero">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <h2 class="nav__title">GYM</h2>
-            </div>
-            <ul class="nav__link nav__link--menu">
-                <li class="nav__items">
-                  <h5><a href="indexADMIN.html" class="nav__links">Inicio</a></h5></a>
-                </li>
-            </ul>
-
-            <div class="nav__menu">
-                <img src=".IMG/LOGO.png" class="nav__img">
-            </div>
-        </nav>
-
-        <section class="hero__container container">
-            <h1 class="hero__title">SporTech</h1>
-            <p class="hero__paragraph"style = color:white;font-size:22px;>Aquí encontrarás equipos de calidad y entrenadores expertos para alcanzar tus metas.</p>
-        </section>
-    </header>
-  <section class="Plan__Gestion">
-    <section class="plan_container">
-      <h1 class="subtitle">Gestión de archivos</h1>
-
-      <div class="plan__table">
-          <div class="plan__element plan__element--best">
-              <h3 class="plan__plan">Exportar</h3>
-
-              <div class="plan__items">
-                  <input type="text" id="texto-archivo" placeholder="Ingrese su csv"/>
-                  <button id="exportar">Exportar</button>
-              </div>
-          </div>             
-      </div>
-      <div class="plan__table imp">
-          <div class="plan__element">
-              <h3 class="plan__plan">Importar</h3>
-              <div class="plan__items">
-                  <input type="file" id="archivo2" />
-              </div>
-          </div> 
-      </div>
-      <article class="tabla">
-          <div class="csv">
-          <div id="tablares"></div>
+  <header class="hero">
+      <nav class="nav container">
+          <div class="nav__logo">
+              <h2 class="nav__title">JM - Admin</h2>
           </div>
-      </article>
-      <h1 class="subtitle">DISEÑO</h1>
-      <table class="table1" style="margin-bottom: 0 !important;">
+          <ul class="nav__link nav__link--menu">
+              <li class="nav__items">
+                <h5><a href="indexJefe.html" class="nav__links">Inicio</a></h5></a>
+              </li>
+          </ul>
+
+          <div class="nav__menu">
+              <img src=".IMG/LOGO.png" class="nav__img">
+          </div>
+      </nav>
+
+      <section class="hero__container container">
+          <h1 class="hero__title">Taller JM</h1>
+          <p class="hero__paragraph"style = color:white;font-size:22px;>Empresa especializada en las motocicletas, tanto la parte de mantenimiento y reparación, como el área de venta de repuestos y accesorios</p>
+      </section>
+  </header>
+      <h1 class="subtitle">Sede USME CLL 46</h1>
+      <div class="buscar-codigo">
+        <h4>Repuesto</h4>
+        <input class="inputBus" id="inputBus" placeholder="Ingresa Referencia del producto">
+        <div class="busq" onclick="buscarJefe()">
+          <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" fill="currentColor" class="bi bi-search" viewBox="0 0 16 16">
+          <path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/>
+          </svg>
+        </div>
+      </div>
+      <div class="editRepuesto" id="editRepuesto">
+        <header>
+          <h1 class="Agre">Agregar</h1>
+        </header>
+        <div class="contenedor-add">
+          <div class="Descripcion-producto">
+            <div class="Contenedor-inputs">
+              <div class="inputsN">
+                Nombre <input type="text">
+              </div>
+              <div class="inputsN">
+                Descripcion <input type="text">
+              </div>
+            </div>
+            <div class="Contenedor-inputs">
+              <div class="inputs">
+                Referencia <input type="number">
+              </div>
+              <div class="inputs">
+                Precio <input type="number">
+              </div>
+              <div class="inputs">
+                Modelo <input type="text">
+              </div>
+              <div class="inputs">
+                <ul style="display: none;">
+                  <li>Yamaha</li>
+                  <li>Apache</li>
+                  <li>Honda</li>
+                </ul>
+
+
+                Tipo de garantía <input type="number">
+              </div>
+            </div>
+            <div class="Contenedor-inputs">
+              <div class="inputs">
+                Marca <input type="text">
+              </div>
+              <div class="inputs">
+                Condición <input type="text">
+              </div>
+              <div class="inputs">
+                Categoría <input type="text">
+              </div>
+              <div class="inputs">
+                Unidades/Stock <input type="number">
+              </div>
+            </div>
+          </div>
+          <div class="Agre">
+            <button class="btnCan" onclick="cancelar()">Cancelar</button>
+            <button class="btnAgre" onclick="agregarProducto()">Agregar Producto</button></div>
+        </div>
+
+        <script>
+          function agregarProducto(){
+            alert("Repuesto agregado a la base de datos");
+          }
+
+          function cancelar(){
+            const editRepuesto = document.getElementById('editRepuesto');
+            editRepuesto.style.display = "none";
+          }
+        </script>
+
+      </div>
+      </div>
+      
+    </div>
+
+
+      </div>
+
+      <table class="table1">
           <tr id="header">
-            <th>Img del producto</th>
             <th>Stock</th>
-            <th>Nombre</th>
-            <th>Módelo</th>
-            <th>Área</th>
-            <th>GUARDAR</th>
-          </tr>
-        
-          <tr>
-            <td><img src="CSS/IMG/Maq1.jpg" alt="Imagen 1"></td>
-            <td>
-              <div class="quantity">
-                <input step="1" min="1"max="20" name="quantity" value="11" title="Qty" class="input-text qty text" size="4" type="number">
-              </div>
-            </td>
-            <td>Máquina Tren superior biceps</td>
-            <td>F4KJE2KB</td>
-            <td>Cardio</td>
-            <td><button class="incrementButton">Incrementar</button></td>
-          </tr>
-        
-          <tr>
-            <td><img src="CSS/IMG/Maq2.png" alt="Imagen 4"></td>
-            <td>
-              <div class="quantity">
-                <input step="1" min="1"max="20" name="quantity" value="9" title="Qty" class="input-text qty text" size="4" type="number">
-              </div>
-            </td>
-            <td>Máquina Espalda superior completa</td>
-            <td>PHBS5CH3</td>
-            <td>Estiramiento</td>
-            <td><button class="incrementButton">Incrementar</button></td>
-          </tr>
-  
-          <tr>
-              <td><img src="CSS/IMG/Maq3.png" alt="Imagen 4"></td>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Referencia</th>
+              <th>Precio</th>
+              <th>Modelo</th>
+              <th>Tipo de garantía</th>
+              <th>Marca</th>
+              <th>Condición</th>
+              <th>Categoría</th>
+              <th></th>
+              <th>Op</th>
+              <th>ci</th>
+              <th>on</th>
+              <th>es</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr class="NoKitArr">
               <td>
                 <div class="quantity">
                   <input step="1" min="1"max="20" name="quantity" value="12" title="Qty" class="input-text qty text" size="4" type="number">
                 </div>
               </td>
-              <td>Máquina Piernas peso inferior</td>
-              <td>IUE5T489</td>
-              <td>Fuerza</td>
-              <td><button class="incrementButton">Incrementar</button></td>
+              <td>Amortiguadores</td>
+              <td>Descripción amortiguadores</td>
+              <td>REF001</td>
+              <td>121.000</td>
+              <td>Libero</td>
+              <td> 3 Mes</td>
+              <td>Varias Marcas</td>
+              <td>NVO</td>
+              <td>Trail</td>
+              <td></td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle incrementButton" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </td>
+              <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle decrementButton" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg></td>
+                
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3 deleteButton" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg></td>
+              
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg></td>
             </tr>
-      </table>
+            <tr class="KitArr">
+              <td>
+                <div class="quantity">
+                  <input step="1" min="1"max="20" name="quantity" value="12" title="Qty" class="input-text qty text" size="4" type="number">
+                </div>
+              </td>
+              <td>Kit De Arrastre </td>
+              <td>Descripción kit de arrastre</td>
+              <td>REF669</td>
+              <td>129.500</td>
+              <td>V/M</td>
+              <td>6 Mes</td>
+              <td>Yamaha</td>
+              <td>NVO</td>
+              <td>V/A</td>
+              <td></td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle incrementButton" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </td>
+              <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle decrementButton" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg></td>
+                
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3 deleteButton" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg></td>
+              
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg></td>
+            </tr>
+            <tr class="NoKitArr">
+              <td>
+                <div class="quantity">
+                  <input step="1" min="1"max="20" name="quantity" value="12" title="Qty" class="input-text qty text" size="4" type="number">
+                </div>
+              </td>
+              <td>Carburador</td>
+              <td>Descripción carburador</td>
+              <td>REF011</td>
+              <td>205.000</td>
+              <td>BWS</td>
+              <td>1 Mes</td>
+              <td>Apache</td>
+              <td>USA</td>
+              <td>Trail</td>
+              <td></td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle incrementButton" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </td>
+              <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle decrementButton" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg></td>
+                
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3 deleteButton" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg></td>
+              
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg></td>
+            </tr>
+            <tr class="NoKitArr">
+              <td>
+                <div class="quantity">
+                  <input step="1" min="1"max="20" name="quantity" value="12" title="Qty" class="input-text qty text" size="4" type="number">
+                </div>
+              </td>
+              <td>Kit Cilindro Completo</td>
+              <td>Descripción kit de cilindro</td>
+              <td>REF039</td>
+              <td>268.000</td>
+              <td>V/M</td>
+              <td>N/A</td>
+              <td>Yamaha</td>
+              <td>NVO</td>
+              <td>Pista</td>
+              <td></td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle incrementButton" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </td>
+              <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle decrementButton" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg></td>
+                
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3 deleteButton" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg></td>
+              
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg></td>
+            </tr>
+            <tr class="NoKitArr">
+              <td>
+                <div class="quantity">
+                  <input step="1" min="1"max="20" name="quantity" value="12" title="Qty" class="input-text qty text" size="4" type="number">
+                </div>
+              </td>
+              <td>Exosto DTK / DT</td>
+              <td>Descripción exosto</td>
+              <td>REF612</td>
+              <td>388.000</td>
+              <td>DTK / DT</td>
+              <td> 3 Mes</td>
+              <td>Yamaha</td>
+              <td>NVO</td>
+              <td>Trail</td>
+              <td></td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle incrementButton" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </td>
+              <td >
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle decrementButton" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg></td>
+                
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3 deleteButton" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg></td>
+              
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg></td>
+            </tr>
+            <tr class="NoKitArr">
+              <td>
+                <div class="quantity">
+                  <input step="1" min="1" max="20" name="quantity" value="8" title="Qty" class="input-text qty text" size="4" type="number">
+                </div>
+              </td>
+              <td>Campana Trasera</td>
+              <td>Descripción campana trasera</td>
+              <td>REF453</td>
+              <td>247.000</td>
+              <td>V/M</td>
+              <td>3 Mes</td>
+              <td>Honda</td>
+              <td>REAC</td>
+              <td>V/A</td>
+              <td></td>
+              <td>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-plus-circle incrementButton" viewBox="0 0 16 16">
+                  <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                  <path d="M8 4a.5.5 0 0 1 .5.5v3h3a.5.5 0 0 1 0 1h-3v3a.5.5 0 0 1-1 0v-3h-3a.5.5 0 0 1 0-1h3v-3A.5.5 0 0 1 8 4z"/>
+                </svg>
+              </td>
+              <td>
+              <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-dash-circle decrementButton" viewBox="0 0 16 16">
+                <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14zm0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16z"/>
+                <path d="M4 8a.5.5 0 0 1 .5-.5h7a.5.5 0 0 1 0 1h-7A.5.5 0 0 1 4 8z"/>
+              </svg></td>
+                
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-trash3 deleteButton" viewBox="0 0 16 16">
+                  <path d="M6.5 1h3a.5.5 0 0 1 .5.5v1H6v-1a.5.5 0 0 1 .5-.5ZM11 2.5v-1A1.5 1.5 0 0 0 9.5 0h-3A1.5 1.5 0 0 0 5 1.5v1H2.506a.58.58 0 0 0-.01 0H1.5a.5.5 0 0 0 0 1h.538l.853 10.66A2 2 0 0 0 4.885 16h6.23a2 2 0 0 0 1.994-1.84l.853-10.66h.538a.5.5 0 0 0 0-1h-.995a.59.59 0 0 0-.01 0H11Zm1.958 1-.846 10.58a1 1 0 0 1-.997.92h-6.23a1 1 0 0 1-.997-.92L3.042 3.5h9.916Zm-7.487 1a.5.5 0 0 1 .528.47l.5 8.5a.5.5 0 0 1-.998.06L5 5.03a.5.5 0 0 1 .47-.53Zm5.058 0a.5.5 0 0 1 .47.53l-.5 8.5a.5.5 0 1 1-.998-.06l.5-8.5a.5.5 0 0 1 .528-.47ZM8 4.5a.5.5 0 0 1 .5.5v8.5a.5.5 0 0 1-1 0V5a.5.5 0 0 1 .5-.5Z"/>
+                </svg></td>
+              
+                <td><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-pencil-square" viewBox="0 0 16 16">
+                  <path d="M15.502 1.94a.5.5 0 0 1 0 .706L14.459 3.69l-2-2L13.502.646a.5.5 0 0 1 .707 0l1.293 1.293zm-1.75 2.456-2-2L4.939 9.21a.5.5 0 0 0-.121.196l-.805 2.414a.25.25 0 0 0 .316.316l2.414-.805a.5.5 0 0 0 .196-.12l6.813-6.814z"/>
+                  <path fill-rule="evenodd" d="M1 13.5A1.5 1.5 0 0 0 2.5 15h11a1.5 1.5 0 0 0 1.5-1.5v-6a.5.5 0 0 0-1 0v6a.5.5 0 0 1-.5.5h-11a.5.5 0 0 1-.5-.5v-11a.5.5 0 0 1 .5-.5H9a.5.5 0 0 0 0-1H2.5A1.5 1.5 0 0 0 1 2.5v11z"/>
+                </svg></td>
+            </tr>
+            <script>
+              
+              const decrementButtons = document.querySelectorAll('.decrementButton');
+
+              decrementButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                  const quantityInput = this.parentNode.parentNode.querySelector('.quantity input');
+                  let currentValue = parseInt(quantityInput.value);
+                  if (currentValue > 0) {
+                    quantityInput.value = currentValue - 1;
+                  }
+                });
+                });
+
+                const incrementButtons = document.querySelectorAll('.incrementButton');
+
+              incrementButtons.forEach(button => {
+                button.addEventListener('click', function() {
+                  const quantityInput = this.parentNode.parentNode.querySelector('.quantity input');
+                  let currentValue = parseInt(quantityInput.value);
+                  if (currentValue < 20) {
+                    quantityInput.value = currentValue + 1;
+                  }
+                });
+                });
+              
+                const deleteButtons = document.querySelectorAll('.deleteButton');
+
+                deleteButtons.forEach(button => {
+                  button.addEventListener('click', function() {
+                    const row = this.closest('tr');
+                    row.style.display = 'none';
+                  });
+                });
+
+                function buscarJefe() {          
+        // Obtener el valor del texto ingresado en el campo de entrada
+        const textoIngresado = document.getElementById('inputBus').value;
         
-      
-      <script>
-      const incrementButtons = document.querySelectorAll('.incrementButton');
-      const quantityInputs = document.querySelectorAll('.quantity input');
-      
-      incrementButtons.forEach((button, index) => {
-        button.addEventListener('click', function() {
-          let currentValue = parseInt(quantityInputs[index].value);
-          if (currentValue < 10) {
-            quantityInputs[index].value = currentValue + 1;
-          }
-        });
-      });
-      </script>
-      
-      
-      </table>
-      
-      <br>
-      <div id="GUARDAR" style="text-align: left;">
-        <button type="submit" title="GUARDAR" name="Guardar" onclick="mostrarAlertaGuardado()">Guardar</button>
-      </div>
-      
-      <script>
-      function mostrarAlertaGuardado() {
-        alert("El inventario se ha actualizado.");
+        // Texto de comparación definido en el código JavaScript
+        const textoComparacion = 'REF669';
+        
+        // Comparar los dos textos
+        if (textoIngresado === textoComparacion) {
+          document.querySelectorAll('.NoKitArr').forEach(function(elemento) {
+                elemento.style.display = "none ";
+              });
+          alert("Repuesto encontrado en la BD");
+          
+        } else {
+          alert("Repuesto NO encontrado en la BD");
+          document.querySelectorAll('.NoKitArr').forEach(function(elemento) {
+                elemento.style.display = "";
+              });
+        }
       }
+
+      function mostrarAgre(className){
+            const editRepuesto = document.getElementById('editRepuesto');
+            editRepuesto.style.display = "grid";
+
+            var element = document.querySelector(className);
+                        if (element) {
+                            window.scrollTo({
+                            top: element.offsetTop,
+                            behavior: 'smooth'
+                            });
+                        }
+      }
+
       </script>
-      
-      
-      <div id="ImprimirInforme" style="text-align: left;">
-        <button type="submit" formaction="login.html" title="ImprimirInforme" name="Imprimir Informe" onclick="mostrarAlerta()">Imprimir Informe</button>
+            
+      </table>        
+      <div id="GUARDAR" style="text-align: left;">
+        <button type="button" onclick="alertGuard()" title="Guardar">Guardar</button>
       </div>
-      
+      <div id="GUARDAR" style="text-align: left;">
+        <button type="button" onclick="mostrarAgre('.subtitle')" title="Agregar">Agregar</button>
+      </div>
+      <div id="GUARDAR" style="text-align: left;">
+        <button type="button" onclick="descargarArchivo()" title="Imprimir">Imprimir</button>
+      </div>
+
       <script>
-        function mostrarAlerta() {
-          alert("Descargando informe de inventario");
+        function descargarArchivo() {
+          var ruta = "bd.csv";
+          var link = document.createElement('a');
+          link.href = ruta;
+          link.download = 'bd.csv';
+          link.click();
+        }
+        function alertGuard(){
+          alert("Inventario actualizado");
         }
       </script>
 
@@ -169,118 +472,17 @@
             <h3>CONTACTO</h3>
             <ul>
               <li><i class="fas fa-phone"></i> 3208162801</li>
-              <li><i class="fas fa-envelope"></i> SporTech@servicio.com</li>
+              <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
               <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2023 Todos los derechos reservados | SporTech | By: Cristian</p>
+          <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
         </div>
       </div>
     </footer>
 
-  <script>
-    /**
-    * Exportar
-    **/
-    function exportar (data, fileName) {
-      const a = document.createElement("a");
-      const contenido = data,
-          blob = new Blob([contenido], {type: "octet/stream"}),
-          url = window.URL.createObjectURL(blob);
-      a.href = url;
-      a.download = fileName;
-      a.click();
-      window.URL.revokeObjectURL(url);
-      
-    };
-
-    document.querySelector('#exportar').onclick = function () {
-      const data = document.querySelector('#texto-archivo').value;
-      const nombreArchivo = 'ejemplo.txt'
-      exportar(data, nombreArchivo);
-    }
-
-    /**
-    * Importar y operar con .csv
-    **/
-    function crearTabla(data) {
-      const todasFilas = data.split(/\r?\n|\r/);
-      let tabla = '<table>';
-      for (let fila = 0; fila < todasFilas.length; fila++) {
-        if (fila === 0) {
-          tabla += '<thead>';
-          tabla += '<tr>';
-        } else {
-          tabla += '<tr>';
-        }
-        const celdasFila = todasFilas[fila].split(',');
-        for (let rowCell = 0; rowCell < celdasFila.length; rowCell++) {
-          if (fila === 0) {
-            tabla += '<th>';
-            tabla += celdasFila[rowCell];
-            tabla += '</th>';
-          } else {
-            tabla += '<td>';
-            tabla += celdasFila[rowCell];
-            tabla += '</td>';
-          }
-        }
-        if (fila === 0) {
-          tabla += '</tr>';
-          tabla += '</thead>';
-          tabla += '<tbody>';
-        } else {
-          tabla += '</tr>';
-        }
-      } 
-      tabla += '</tbody>';
-      tabla += '</table>';
-      document.querySelector('#tablares').innerHTML = tabla;
-    }
-    
-
-    function leerArchivo2(evt) {
-        let file = evt.target.files[0];
-        let reader = new FileReader();
-        
-        if (file) {
-          reader.onload = (e) => {
-            // Cuando el archivo se terminó de cargar
-            crearTabla(e.target.result);
-          };
-          // Leemos el contenido del archivo seleccionado
-          reader.readAsText(file);
-        }
-      }
-    document.querySelector('#archivo2')
-      .addEventListener('change', leerArchivo2, false);
-
-
-    /**
-     * Leer y mostrar contenido inmediatamente
-    **/  
-    function mostrarContenido(contenido) {
-        const elemento = document.getElementById('contenido-archivo');
-        elemento.innerHTML = contenido;
-      }
-    function leerArchivo(e) {
-      const archivo = e.target.files[0];
-      if (!archivo) {
-        return " ";
-      }
-      const lector = new FileReader();
-      lector.onload = function(e) {
-        const contenido = e.target.result;
-        mostrarContenido(contenido);
-      };
-      lector.readAsText(archivo);
-    }
-
-    document.querySelector('#archivo1')
-      .addEventListener('change', leerArchivo, false);
-  </script>
 </body>
 
 </html>

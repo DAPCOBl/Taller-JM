@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <head>
-    <title>SporTech</title>
+    <title>Taller JM</title>
     <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/JS/scroll.js">
@@ -9,41 +9,25 @@
     <header class="hero">
         <nav class="nav container">
             <div class="nav__logo">
-                <h2 class="nav__title">GYM</h2>
+                <h2 class="nav__title">JM - Admin</h2>
             </div>
             <ul class="nav__link nav__link--menu">
-
                 <li class="nav__items">
-                    <h5><a class="nav__links" onclick="scrollToElement('.plan_container')">Suplementos</a></h5>
-                
-                <script>
-                function scrollToElement(className) {
-                var element = document.querySelector(className);
-                if (element) {
-                    window.scrollTo({
-                    top: element.offsetTop,
-                    behavior: 'smooth'
-                    });
-                }
-                }
-                </script>
-
+                    <h5><a href="gestionInventarioJefe.html" class="nav__links">Inventarios</a></h5></a>
                 </li>
-                <li class="nav__items">
-                    <h5><a href="horarioCliente.html" class="nav__links">Clases grupales</a></h5></a>
-                </li>
-
                 <li class="nav__items">
                     <h5><a href="index.html" class="nav__links">Cerrar Sesión</a></h5></a>
                 </li>
-
             </ul>
+            <div class="nav__menu">
+                <img src=".IMG/LOGO.png" class="nav__img">
+            </div>
         </nav>
 
         <section class="hero__container container">
-            <h1 class="hero__title">SporTech</h1>
-            <p class="hero__paragraph"style = color:white;font-size:22px;>Aquí encontrarás equipos de calidad y entrenadores expertos para alcanzar tus metas.</p>
-                <a href="horarioCliente.html" style = color:white class="cta">Ver horario</a>
+            <h1 class="hero__title">Taller JM</h1>
+            <p class="hero__paragraph"style = color:white;font-size:22px;>Empresa especializada en las motocicletas, tanto la parte de mantenimiento y reparación, como el área de venta de repuestos y accesorios</p>
+                <a href="gestionInventarioJefe.html"style = color:white class="cta">Gestionar Inventarios</a>
         </section>
     </header>
 
