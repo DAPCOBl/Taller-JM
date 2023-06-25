@@ -18,6 +18,18 @@
                 <li class="nav__items">
                     <h5><a href="index.html" class="nav__links">Cerrar Sesión</a></h5></a>
                 </li>
+                <li class="nav__items perfil">
+                    <svg xmlns="http://www.w3.org/2000/svg" onclick="redireccionar()" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                      </svg>
+                      
+                      <script>
+                        function redireccionar() {
+                          window.location.href = 'perfil.html';
+                        }
+                      </script>
+                </li>
             </ul>
             <div class="nav__menu">
                 <img src=".IMG/LOGO.png" class="nav__img">
@@ -246,6 +258,9 @@
                         </div>
                     </div>
                 </div>
+
+
+
                 <div class="cargar NoYamaha"  >
                     <button class = "btnmas" id = "btnmas" onclick = "cargar()">
                         Ver más Productos
@@ -267,6 +282,7 @@
                         </div>
                     </div>
                 </div>
+
                 <div class="NoYamaha">
                 <div class = "cardmas" id = "cardmas">
                     <img src="CSS/IMG/Prod/prod8.webp" alt="">
