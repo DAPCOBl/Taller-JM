@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>SporTech</title>
+    <title>Taller JM</title>
     <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/invntario.css">
@@ -32,93 +32,99 @@
       </section>
   </header>
       <h1 class="subtitle">Gestión de repuestos</h1>
-      <table class="table1" style="margin-bottom: 0 !important;">
+      <table class="table1">
           <tr id="header">
-            <th>Img del producto</th>
-            <th>Stock</th>
-            <th>Nombre</th>
-            <th>Módelo</th>
-            <th>Área</th>
-            <th>GUARDAR</th>
-          </tr>
-        
-          <tr>
-            <td><img src="CSS/IMG/Maq1.jpg" alt="Imagen 1"></td>
-            <td>
-              <div class="quantity">
-                <input step="1" min="1"max="20" name="quantity" value="11" title="Qty" class="input-text qty text" size="4" type="number">
-              </div>
-            </td>
-            <td>Máquina Tren superior biceps</td>
-            <td>F4KJE2KB</td>
-            <td>Cardio</td>
-            <td><button class="incrementButton">Incrementar</button></td>
-          </tr>
-        
-          <tr>
-            <td><img src="CSS/IMG/Maq2.png" alt="Imagen 4"></td>
-            <td>
-              <div class="quantity">
-                <input step="1" min="1"max="20" name="quantity" value="9" title="Qty" class="input-text qty text" size="4" type="number">
-              </div>
-            </td>
-            <td>Máquina Espalda superior completa</td>
-            <td>PHBS5CH3</td>
-            <td>Estiramiento</td>
-            <td><button class="incrementButton">Incrementar</button></td>
-          </tr>
-  
-          <tr>
-              <td><img src="CSS/IMG/Maq3.png" alt="Imagen 4"></td>
-              <td>
-                <div class="quantity">
-                  <input step="1" min="1"max="20" name="quantity" value="12" title="Qty" class="input-text qty text" size="4" type="number">
-                </div>
-              </td>
-              <td>Máquina Piernas peso inferior</td>
-              <td>IUE5T489</td>
-              <td>Fuerza</td>
-              <td><button class="incrementButton">Incrementar</button></td>
+              <th>Nombre</th>
+              <th>Descripción</th>
+              <th>Referencia</th>
+              <th>Precio</th>
+              <th>Modelo</th>
+              <th>Tipo de garantía</th>
+              <th>Marca</th>
+              <th>Condición</th>
+              <th>Categoría</th>
             </tr>
-      </table>
-        
-      
-      <script>
-      const incrementButtons = document.querySelectorAll('.incrementButton');
-      const quantityInputs = document.querySelectorAll('.quantity input');
-      
-      incrementButtons.forEach((button, index) => {
-        button.addEventListener('click', function() {
-          let currentValue = parseInt(quantityInputs[index].value);
-          if (currentValue < 10) {
-            quantityInputs[index].value = currentValue + 1;
-          }
-        });
-      });
-      </script>
-      
-      
-      </table>
-      
-      <br>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Amortiguadores</td>
+              <td>Descripción amortiguadores</td>
+              <td>REF001</td>
+              <td>121.000</td>
+              <td>Libero</td>
+              <td>Garantía 3 meses</td>
+              <td>Varias Marcas</td>
+              <td>Nuevo</td>
+              <td>Trail</td>
+            </tr>
+            <tr>
+              <td>Kit De Arrastre </td>
+              <td>Descripción kit de arrastre</td>
+              <td>REF669</td>
+              <td>129.500</td>
+              <td>Varios modelos</td>
+              <td>Garantía extendida</td>
+              <td>Yamaha</td>
+              <td>Nuevo</td>
+              <td>Varias categorias</td>
+            </tr>
+            <tr>
+              <td>Carburador</td>
+              <td>Descripción carburador</td>
+              <td>REF011</td>
+              <td>205.000</td>
+              <td>BWS100</td>
+              <td>Garantía del fabricante</td>
+              <td>Apache</td>
+              <td>Usado</td>
+              <td>Trail</td>
+            </tr>
+            <tr>
+              <td>Kit Cilindro Completo</td>
+              <td>Descripción kit de cilindro</td>
+              <td>REF039</td>
+              <td>268.000</td>
+              <td>Varios modelos</td>
+              <td>No aplica</td>
+              <td>Yamaha</td>
+              <td>Nuevo</td>
+              <td>Pista</td>
+            </tr>
+            <tr>
+              <td>Exosto DTK / DT</td>
+              <td>Descripción exosto</td>
+              <td>REF612</td>
+              <td>388.000</td>
+              <td>DTK / DT</td>
+              <td>Garantía 3 meses</td>
+              <td>Yamaha</td>
+              <td>Nuevo</td>
+              <td>Trail</td>
+            </tr>
+            <tr>
+              <td>Campana Trasera</td>
+              <td>Descripción campana trasera</td>
+              <td>REF453</td>
+              <td>247.000</td>
+              <td>Varios modelos</td>
+              <td>Garantía 3 meses</td>
+              <td>Honda</td>
+              <td>Reacondicionado</td>
+              <td>Varias categorias</td>
+            </tr>
+      </table>      
+
       <div id="GUARDAR" style="text-align: left;">
-        <button type="submit" title="GUARDAR" name="Guardar" onclick="mostrarAlertaGuardado()">Guardar</button>
+        <button type="button" onclick="descargarArchivo()" title="Imprimir">Imprimir</button>
       </div>
       
       <script>
-      function mostrarAlertaGuardado() {
-        alert("El inventario se ha actualizado.");
-      }
-      </script>
-      
-      
-      <div id="ImprimirInforme" style="text-align: left;">
-        <button type="submit" formaction="login.html" title="ImprimirInforme" name="Imprimir Informe" onclick="mostrarAlerta()">Imprimir Informe</button>
-      </div>
-      
-      <script>
-        function mostrarAlerta() {
-          alert("Descargando informe de inventario");
+        function descargarArchivo() {
+          var ruta = "bd.csv";
+          var link = document.createElement('a');
+          link.href = ruta;
+          link.download = 'bd.csv';
+          link.click();
         }
       </script>
 
@@ -141,13 +147,13 @@
             <h3>CONTACTO</h3>
             <ul>
               <li><i class="fas fa-phone"></i> 3208162801</li>
-              <li><i class="fas fa-envelope"></i> SporTech@servicio.com</li>
+              <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
               <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
             </ul>
           </div>
         </div>
         <div class="footer-bottom">
-          <p>&copy; 2023 Todos los derechos reservados | SporTech | By: Cristian</p>
+          <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
         </div>
       </div>
     </footer>
