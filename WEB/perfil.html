@@ -25,6 +25,7 @@
                     </div>
                 </div>
                 <button class="btn" id="abrir">Editar perfil</button>
+                <button class="btn regr" id="abrir" onclick="regr()">Regresar</button>
             </div>
             </div>
             <div id="miModal" class="modal">
@@ -52,6 +53,10 @@
             </div>
             
             <script>
+                function regr(){
+                    window.location.href = 'indexJefe.html';
+                }
+
                 function cancelar(){
                     modal.style.display = 'none';
                 }
@@ -134,14 +139,18 @@
     </script>
     <style>
         .perfil-card{
-    margin-top: 25vb;
-}
+            margin-top: 25vb;
+        }
+
+        .regr{
+            margin-top: 15px;
+        }
 .card{
     margin-top: 300px;
     justify-content: center;
     margin: auto;
     width: 320px;
-    height: 410px;
+    height: 480px;
     background: #fff;
     border-radius: 10px;
     position: relative;
