@@ -1,7 +1,6 @@
-Nombre,Apellido,Telefono,Sede,Estado,
-Lucia,Suarez,69432681,USME CLL 46,Inactivo
-Paula,Herrera,109352079,USME KR 30,Activo
-Sara,Martínez,143298234,BOGOTA 1 MAYO,Activo
+Stock,Nombre,Descripción,Referencia,Precio,Modelo,Tipo de garantía,Marca,Condición,Categoría,Motivo,Fecha,Estado
+10,Amortiguadores,Descripción amortiguadores,REF001,121.000,Libero,3 Mes,Varias Marcas,NVO,Trail,Incompatibilidad,28-06-2023,En proceso
+
 
 
 

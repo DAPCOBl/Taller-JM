@@ -346,6 +346,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
 
 .plan__table{
     padding-top: 20px;
+    margin-bottom: 40px;
     display: flex;
     flex-wrap: wrap;
     gap: 2.5em;
