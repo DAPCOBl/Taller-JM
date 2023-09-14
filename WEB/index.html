@@ -4,17 +4,23 @@
     <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/JS/scroll.js">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+    <!-- Compiled and minified CSS -->
+    
+
 </head>
 <body>
     <header class="hero">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <h2 class="nav__title">JM</h2>
+        <nab class="nab container">
+            <div class="nab__logo">
+                <h2 class="nab__title">JM</h2>
             </div>
-            <ul class="nav__link nav__link--menu">
+            <ul class="nab__link nab__link--menu">
 
-                <li class="nav__items">
-                    <h5><a class="nav__links" onclick="scrollToElement('.sedes')">Sedes</a></h5>
+                <li class="nab__items">
+                    <h5><a class="nab__links" onclick="scrollToElement('.sedes')">Sedes</a></h5>
                 <script>
                 function scrollToElement(className) {
                 var element = document.querySelector(className);
@@ -28,8 +34,8 @@
                 </script>
                 </li>
                 
-                <li class="nav__items">
-                    <h5><a class="nav__links" onclick="scrollToElement('.plan__services')">Servicios</a></h5></a>
+                <li class="nab__items">
+                    <h5><a class="nab__links" onclick="scrollToElement('.plan__services')">Servicios</a></h5></a>
                 
                     <script>
                         function scrollToElement(className) {
@@ -44,8 +50,8 @@
                 </script>
                 </li>
                 
-                <li class="nav__items">
-                    <h5><a class="nav__links" onclick="scrollToElement('.prod')">Productos</a></h5></a>
+                <li class="nab__items">
+                    <h5><a class="nab__links" onclick="scrollToElement('.prod')">Productos</a></h5></a>
                 
                     <script>
                         function scrollToElement(className) {
@@ -62,10 +68,10 @@
 
             </ul>
 
-            <div class="nav__menu">
-                <img src=".IMG/LOGO.png" class="nav__img">
+            <div class="nab__menu">
+                <img src=".IMG/LOGO.png" class="nab__img">
             </div>
-        </nav>
+        </nab>
         <section class="hero__container container">
             <h1 class="hero__title">Taller JM</h1>
             <p class="hero__paragraph"style = color:white;font-size:22px;>Empresa especializada en las motocicletas, tanto la parte de mantenimiento y reparación, como el área de venta de repuestos y accesorios</p>
@@ -220,8 +226,8 @@
                 </div>
                 <div class="ProdYamaha">
                     <div class = "card">
-                        <img src="CSS/IMG/Prod/prod2.webp" alt="">
-                        <div class = "info">
+                        <img src="CSS/IMG/Prod/prod2.webp">
+                        <div class = " info">
                             <h5 id="filtroYamaha">Enduro-Nuevo</h5>
                             <h2>Kit De Arrastre Yamaha</h2>
                             <h3>$129.500</h3>
@@ -398,44 +404,87 @@
             
         </section>
 
-        <section class="Plan__Grupal">
-            <div class="Plan__Grupal__container container">
-                <div class="Plan__Grupal__Text">
-                    <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
-                    <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de manera eficiente. </p>
-                    
-                    <button  class="Plan__Grupalcta" id="Plan__Grupalcta" onclick = "verList()">
-                        Ver proveedores
-                    </button>
-                    <div id="list" style="display: none;">
-                        <ul id="proveedoresList" style="display: flex;">
+<section class="Plan__Grupal" style="margin-top: 100px !important;">
+        <div class="Plan__Grupal__container container">
+            <div class="Plan__Grupal__Text">
+                <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
+                <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los
+                    recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de
+                    manera eficiente. </p>
+
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" style=" display: inline-block;
+        background-color: #FF6A00;
+        justify-self: center;
+        color: #fff !important;
+        border-radius: 32px;" href="#modal1">Ver proveedores </a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal bottom-sheet">
+                    <div class="modal-content">
+                        <h3>Nuestros proveedores</h3>
+                        <div id="list" style="display: inline-flex; padding-top: 10px;">
                             <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png" onclick="llevarAuteco()"></li>
                             <li class="spac"><img src="CSS/IMG/Proveedores/honda.png" onclick="llevarHonda()"></li>
                             <li><img src="CSS/IMG/Proveedores/BAJAB.png" onclick="llevarBajab()"></li>
-                          </ul>
+                        </div>
                     </div>
-                  </div>
+                    
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">x</a>
+                    </div>
+                </div>
 
-                  <script>
-                    function llevarAuteco(){
-                        location.href="https://www.auteco.com.co/";
-                    }
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var elems = document.querySelectorAll('.modal');
+                        var instances = M.Modal.init(elems, {}); // Initialize modals with no options
+                    });
+                </script>
+            </div>
 
-                    function llevarHonda(){
-                        location.href="https://motos.honda.com.co";
-                    }
+            <script>
 
-                    function llevarBajab(){
-                        location.href="https://colombia.globalbajaj.com/";
-                    }
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('.modal');
+                    var instances = M.Modal.init(elems, options);
+                });
 
-                    function verList(){
-                        {
-                            document.getElementById('Plan__Grupalcta').style.display = "none";
-                            document.getElementById('list').style.display = "block";
-                        }
+                // Or with jQuery
+
+                $(document).ready(function () {
+                    $('.modal').modal();
+                });
+
+                instance.open();
+
+                instance.close();
+
+                instance.destroy();
+
+
+                function llevarAuteco() {
+                    location.href = "https://www.auteco.com.co/";
+                }
+
+                function llevarHonda() {
+                    location.href = "https://motos.honda.com.co";
+                }
+
+                function llevarBajab() {
+                    location.href = "https://colombia.globalbajaj.com/";
+                }
+
+                function verList() {
+                    {
+                        document.getElementById('Plan__Grupalcta').style.display = "none";
+                        document.getElementById('list').style.display = "block";
                     }
-                  </script>
+                }
+            </script>
+
+
 
                 <figure class="Plan__Grupal__picture">
                     <img src="CSS/IMG/ClaseGrupal.webp" class="Plan__Grupal__img">
