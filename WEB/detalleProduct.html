@@ -4,118 +4,135 @@
     <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/detalleProd.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 
-
 </head>
+
 <body>
     <header class="hero">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <h2 class="nav__title">JM - Producto</h2>
+        <nab class="nab container">
+            <div class="nab__logo">
+                <h2 class="nab__title">JM - Producto</h2>
             </div>
-            <ul class="nav__link nav__link--menu">
-                <li class="nav__items">
-                    <h5><a href="index.html" class="nav__links">Regresar</a></h5></a>
+            <ul class="nab__link nab__link--menu">
+                <li class="nab__items">
+                    <h5><a href="index.html" class="nab__links">Regresar</a></h5></a>
                 </li>
             </ul>
-        </nav>        
+        </nab>
     </header>
 </body>
 
 <script>
-    function aparecerdesp(){
+    function aparecerdesp() {
         document.getElementById('descripcion').style.display = "block";
         document.getElementById('especificacion').style.display = "none";
         document.getElementById('raya1').style.display = "block";
         document.getElementById('raya2').style.display = "none";
     }
 
-    function aparecerespe(){
+    function aparecerespe() {
         document.getElementById('descripcion').style.display = "none";
         document.getElementById('especificacion').style.display = "block";
         document.getElementById('raya1').style.display = "none";
         document.getElementById('raya2').style.display = "block";
-    }  
+    }
+
+    document.addEventListener('DOMContentLoaded', function () {
+        var elems = document.querySelectorAll('.materialboxed');
+        var instances = M.Materialbox.init(elems, {}); // Aquí, las opciones están vacías por ahora
+    });
+
+    // O con jQuery
+
+    $(document).ready(function () {
+        $('.materialboxed').materialbox();
+    });
+
 </script>
 </head>
+
 <body>
 
-<div class="contenedor-producto">
-    <div class="producto">
-        <div class = "imagen">
-            <img class="materialboxed "src="CSS/IMG/Prod/prod2.webp" alt="" id="img1">                               
-        </div>
-    <div class="info-pro">
-        <h5>Yamaha-Enduro-Nuevo</h5>
-        <h1>Kit De Arrastre Yamaha Xtz 150 Original Reforzado Casarella</h1>
-        <h2>$129.500</h2>
-
-    </div>
-</div>
-</div>
-
-<div class = "contenedor-descripcion">
-<div class="sobre">
-    <h1>SOBRE EL PRODUCTO</h1>
-</div>
-<div class="cat">
-    <div class=" cat-descp" onclick="aparecerdesp()">
-        <h3>Caracteristicas</h3>
-        <div class="raya1" id="raya1"></div>
-    </div>
-    <div class=" cat-espe" onclick="aparecerespe()">
-        <h3>ESPECIFICACIONES</h3>
-        <div class="raya2" id="raya2"></div>
-    </div>
-</div>
-<div class="descripcion" id="descripcion">        
-    <li> Material de la corona: Acero</li>
-    <li> Cantidad de dientes de la corona: 45</li>
-    <li> Largo de la cadena: 132 cm</li>
-    <li> Cantidad de dientes del piñón: 14</li>
-    <li>Cantidad de eslabones de la cadena: 428</li>
-</div>
-<div class="especificacion" id="especificacion">
-   <div class = "contenido1">
-    <div class="parr">
-        Nota: Imagen publicada es solo de muestra, el producto puede variar de acuerdo a la referencia de la moto, leer la descripción del producto para conocer sus características.
-    </div>
-    <div class="parr">
-        Relación: Original Catalina de 45 dientes y Piñón Salida 14 dientes Plateados Acero 1045 Templado
-        Cadena: Reforzada 428H-132 Color Dorada Buje Solido Fabricación Japonesa Duración del kit bajo condiciones optimas de mantenimiento 16.000 a 20.000 Kilómetros.
-    </div>
-   </div>
-</div>
-</div>
-        <footer>
-            <img src="">
-            <div class="container">
-              <div class="footer-content">
-                <div class="footer-section">
-                  <h3>TÉRMINOS Y CONDICIONES DEL SERVICIO</h3>
-                  <ul>
-                    <li><i class="fas fa-phone"></i> Contrato Usuario 2023</li>
-                    <li><i class="fas fa-envelope"></i> Contrato Usuario 2022</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2023</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2022</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Politica de privacidad</li>
-                  </ul>
-                </div>
-                <div class="footer-section">
-                  <h3>CONTACTO</h3>
-                  <ul>
-                    <li><i class="fas fa-phone"></i> 3208162801</li>
-                    <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="footer-bottom">
-                <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
-              </div>
+    <div class="contenedor-producto">
+        <div class="producto">
+            <div class="imagen">
+                <img class="materialboxed" src="CSS/IMG/Prod/prod2.webp" alt="" id="img1">
             </div>
-          </footer>           
-          
+            <div class="info-pro">
+                <h5>Yamaha-Enduro-Nuevo</h5>
+                <h1>Kit De Arrastre Yamaha Xtz 150 Original Reforzado Casarella</h1>
+                <h2>$129.500</h2>
+
+            </div>
+        </div>
+    </div>
+
+    <div class="contenedor-descripcion">
+        <div class="sobre">
+            <h1>SOBRE EL PRODUCTO</h1>
+        </div>
+        <div class="cat">
+            <div class=" cat-descp" onclick="aparecerdesp()">
+                <h3>Caracteristicas</h3>
+                <div class="raya1" id="raya1"></div>
+            </div>
+            <div class=" cat-espe" onclick="aparecerespe()">
+                <h3>ESPECIFICACIONES</h3>
+                <div class="raya2" id="raya2"></div>
+            </div>
+        </div>
+        <div class="descripcion" id="descripcion">
+            <li> Material de la corona: Acero</li>
+            <li> Cantidad de dientes de la corona: 45</li>
+            <li> Largo de la cadena: 132 cm</li>
+            <li> Cantidad de dientes del piñón: 14</li>
+            <li>Cantidad de eslabones de la cadena: 428</li>
+        </div>
+        <div class="especificacion" id="especificacion">
+            <div class="contenido1">
+                <div class="parr">
+                    Nota: Imagen publicada es solo de muestra, el producto puede variar de acuerdo a la referencia de la
+                    moto, leer la descripción del producto para conocer sus características.
+                </div>
+                <div class="parr">
+                    Relación: Original Catalina de 45 dientes y Piñón Salida 14 dientes Plateados Acero 1045 Templado
+                    Cadena: Reforzada 428H-132 Color Dorada Buje Solido Fabricación Japonesa Duración del kit bajo
+                    condiciones optimas de mantenimiento 16.000 a 20.000 Kilómetros.
+                </div>
+            </div>
+        </div>
+    </div>
+    <footer>
+        <img src="">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TÉRMINOS Y CONDICIONES DEL SERVICIO</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> Contrato Usuario 2023</li>
+                        <li><i class="fas fa-envelope"></i> Contrato Usuario 2022</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2023</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2022</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Politica de privacidad</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>CONTACTO</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> 3208162801</li>
+                        <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
+            </div>
+        </div>
+    </footer>
+
 </body>
+
 </html>
