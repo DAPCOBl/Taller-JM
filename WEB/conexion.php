@@ -10,9 +10,9 @@ class Cconexion{
         
         try {
             $conn = new PDO ("mysql:host=$host;dbname=$dbname",$username,$pasword);
-            echo "BD conectada";
+            echo '<script language="javascript">alert("BD conectada");</script>';
         } catch (PDOException $exp) {
-            echo ("BD NO conectada, $exp");
+            echo '<script language="javascript">alert("BD NO conectada" + exp );</script>';
         }
         return $conn;
         

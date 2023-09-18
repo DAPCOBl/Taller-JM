@@ -34,12 +34,12 @@ if ($conn) {
         $stmt->bindParam(':bodega_idBodega', $bodega_idBodega);
 
         if ($stmt->execute()) {
-            echo "Registro insertado.";
+            echo '<script language="javascript">alert("Registro insertado");</script>';
         } else {
-            echo "Error al insertar el registro: " . $stmt->errorInfo()[2];
+            echo '<script language="javascript">alert("Error al insertar el registro" + . $stmt->errorInfo()[2]);</script>';
         }
     } catch (PDOException $e) {
-        echo "Error en la consulta: " . $e->getMessage();
+        echo '<script language="javascript">alert("Error en la consulta: " + . $e->getMessage()");</script>';
     }
 
     $conn = null;
