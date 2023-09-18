@@ -77,58 +77,11 @@
                     <div class="pie-form">
                         <br>
                         <a href="#" onclick="showAlertRecuperacion()">RECUPERAR CUENTA</a>
-                        <a href="#" id="registrarBtn">REGISTRAR</a>
-
-                        <section class="form1" id="modal1" style="display: none; background-color: #f2f2f2 !important;" >
-                        
-                            
+                        <a href="inscripcion.html" id="registrarBtn">REGISTRAR</a>                            
                         </style>
                     </head>
                     <body>
                       <div class=" container "></div>
-                      <section class="row form">
-                        <div class=" col s12 m4 l12"> <!-- Note that "m4 l3" was added -->
-                        <h1 class= "flow-text h1T">Registrarse</h1>
-                        <form method="POST">
-                      
-                          <div class="divider"></div>
-                          <div class="section">
-                          <label for="nombre">Nombre:</label>
-                          <input type="text" id="nombre" name="nombre" required>
-                          
-                    
-                          <div class="section">
-                          <label for="telefono">telefono:</label>
-                          <input type="tel" id="telefono" name="telefono" required>
-                        
-                    
-                          <div class="section"> 
-                          <label for="correo">correo:</label>
-                          <input type="text" id="correo" name="correo" required>
-                      
-                      
-                      
-                          <input  type="submit" onclick="showAlertInscripcion()" href="login.htmle" value="Enviar">
-                        </form>
-                      </section>
-                      <script>
-                      
-                            const registrarBtn = document.getElementById('registrarBtn');
-                            const modal1 = document.getElementById('modal1');
-
-                            // Función para mostrar el modal
-                            function mostrarModal1() {
-                            modal1.style.display = 'block';
-                            }
-
-                            function hiddenRegister() {
-                            alert("Se ha regristado con exito.");
-                            modal1.style.display = 'none';
-                            }
-
-                            // Asignar evento clic al botón para mostrar el modal
-                            registrarBtn.addEventListener('click', mostrarModal1);
-                        </script>
                         <style>
                             .form{
                             display: flex;
