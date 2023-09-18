@@ -4,30 +4,36 @@
     <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
     <link rel="stylesheet" href="CSS\style.css">
     <link rel="stylesheet" href="CSS/JS/scroll.js">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+
+
 </head>
 <body>
     <header class="hero">
-        <nav class="nav container">
-            <div class="nav__logo">
-                <h2 class="nav__title">JM - Admin</h2>
+        <nab class="nab container">
+            <div class="nab__logo">
+                <h2 class="nab__title">JM - Admin</h2>
             </div>
-            <ul class="nav__link nav__link--menu">
-                <li class="nav__items">
-                    <h5><a href="gestionInventarioAdmin.html" class="nav__links">Inventarios</a></h5></a>
+            <ul class="nab__link nab__link--menu">
+                <li class="nab__items">
+                    <h5><a href="gestionInventarioAdmin.html" class="nab__links">Inventarios</a></h5></a>
                 </li>
-                <li class="nav__items">
-                    <h5><a href="gestionClientesAdmin.html" class="nav__links">Jefe Bodega</a></h5></a>
+                <li class="nab__items">
+                    <h5><a href="gestionClientesAdmin.html" class="nab__links">Jefe Bodega</a></h5></a>
                 </li>
-                <li class="nav__items">
-                    <h5><a href="index.html" class="nav__links">Cerrar Sesión</a></h5></a>
+                <li class="nab__items">
+                    <h5><a href="index.html" class="nab__links">Cerrar Sesión</a></h5></a>
                 </li>
             </ul>
-            <div class="nav__menu">
-                <img src=".IMG/LOGO.png" class="nav__img">
+            <div class="nab__menu">
+                <img src=".IMG/LOGO.png" class="nab__img">
             </div>
-        </nav>
+        </nab>
 
         <section class="hero__container container">
             <h1 class="hero__title">Taller JM</h1>
@@ -324,153 +330,176 @@
 </div>
 </div>
     
+< <section class="plan__services">
 
-        <section class="plan__services">
-            <h1 class="subtitle">SERVICIOS</h1>
-            <div class="services">
-                <ul>
-                  <li><img src="CSS/IMG/Peso.jpg" class="imgServices"></li>
-                  <li class="plan__servicesDescrip">
-                    <p class="servicesP">Mantenimiento programado</p>
-                    <div class="plan__servicesText"> <a>Nos encargamos de cambios de aceite, cambios de titros de aire y de aceite, ajustes de la cadena de transmisión, ajustes de válvulas limpieza de carburadores o inyectores, y revision general del sistema de frenos</a></div>
-                  </li>
+    <h1 class="subtitle">SERVICIOS</h1>
+
+    <ul class="plan__services collapsible" style=" margin-top: 50px;">
+        <li>
+            <div class="collapsible-header">Reparaciones mecánicas</div>
+            <div class="collapsible-body services">
+                <ul class="collapsible-body-text">
+                    <li><img src="CSS/IMG/Fuerza.jpg" class="imgServices"></li>
+                    <li class="plan__servicesDescrip">
+                        <div class="plan__servicesText"> <a>Nos encargamos de reparación o reemplazo de piezas
+                                defectuosas a desgastadas, ajustes de motor, reparación de sistemas de transmisión,
+                                reparación de sistemas de escape, reparación de sistemas de suspensión, y solución
+                                de problemas eléctricas</a></div>
+                    </li>
                 </ul>
             </div>
-            <div class="services">
-                <ul>
-                  <li><img src="CSS/IMG/Fuerza.jpg" class="imgServices"></li>
-                  <li class="plan__servicesDescrip">
-                    <p class="servicesP">Reparaciones mecánicas</p>
-                    <div class="plan__servicesText"> <a>Nos encargamos de reparación o reemplazo de piezas defectuosas a desgastadas, ajustes de motor, reparación de sistemas de transmisión, reparación de sistemas de escape, reparación de sistemas de suspensión, y solución de problemas eléctricas</a></div>
-                  </li>
-                </ul>
-            </div>              
-            <div class="services">
-                <ul>
-                  <li><img src="CSS/IMG/Estiramiento.jpg" class="imgServices"></li>
-                  <li class="plan__servicesDescrip">
-                    <p class="servicesP">Servicio de diagnostico</p>
-                    <div class="plan__servicesText"> <a>Nos encargamos de identificar una falla en específico o situaciones anormales donde elaboramos mediante procedimientos adecuados en los cuales plasmamos todos nuestros conocimientos como especialistas en mecánica. Llegamos a él enumerando y comprobando todas las posibles causas que llevan al mal funcionamiento o avería descrita.</a></div>
-                  </li>
+        </li>
+        <li>
+            <div class="collapsible-header collapsible-border">Mantenimiento programado</div>
+            <div class="collapsible-body services">
+                <ul class="collapsible-body-text">
+                    <li><img src="CSS/IMG/Peso.jpg" class="imgServices"></li>
+                    <li class="plan__servicesDescrip">
+                        <div class="plan__servicesText"> <a>Nos encargamos de cambios de aceite, cambios de titros
+                                de aire y de aceite, ajustes de la cadena de transmisión, ajustes de válvulas
+                                limpieza de carburadores o inyectores, y revision general del sistema de frenos</a>
+                        </div>
+                    </li>
                 </ul>
             </div>
-            
-        </section>
-        <section class="Plan__Grupal" style="margin-top: 100px !important;">
-            <div class="Plan__Grupal__container container">
-                <div class="Plan__Grupal__Text">
-                    <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
-                    <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los
-                        recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de
-                        manera eficiente. </p>
-    
-                    <!-- Modal Trigger -->
-                    <a class="waves-effect waves-light btn modal-trigger" style=" display: inline-block;
-            background-color: #FF6A00;
-            justify-self: center;
-            color: #fff !important;
-            border-radius: 32px;" href="#modal1">Ver proveedores </a>
-    
-                    <!-- Modal Structure -->
-                    <div id="modal1" class="modal bottom-sheet">
-                        <div class="modal-content">
-                            <h3>Nuestros proveedores</h3>
-                            <div id="list" style="display: inline-flex; padding-top: 10px;">
-                                <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png" onclick="llevarAuteco()"></li>
-                                <li class="spac"><img src="CSS/IMG/Proveedores/honda.png" onclick="llevarHonda()"></li>
-                                <li><img src="CSS/IMG/Proveedores/BAJAB.png" onclick="llevarBajab()"></li>
-                            </div>
-                        </div>
-                        
-                        <div class="modal-footer">
-                            <a href="#!" class="modal-close waves-effect waves-green btn-flat">x</a>
-                        </div>
+        </li>
+        <li>
+            <div class="collapsible-header">Servicio de diagnostico</div>
+            <div class="collapsible-body services">
+                <ul class="collapsible-body-text">
+                    <li><img src="CSS/IMG/Estiramiento.jpg" class="imgServices"></li>
+                    <li class="plan__servicesDescrip">
+                        <div class="plan__servicesText"> <a>Nos encargamos de identificar una falla en específico o
+                                situaciones anormales donde elaboramos mediante procedimientos adecuados en los
+                                cuales plasmamos todos nuestros conocimientos como especialistas en mecánica.
+                                Llegamos a él enumerando y comprobando todas las posibles causas que llevan al mal
+                                funcionamiento o avería descrita.</a></div>
+                    </li>
+                </ul>
+            </div>
+        </li>
+    </ul>
+
+
+</section>
+
+<section class="Plan__Grupal" style="margin-top: 100px !important;">
+    <div class="Plan__Grupal__container container">
+        <div class="Plan__Grupal__Text">
+            <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
+            <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los
+                recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de
+                manera eficiente. </p>
+
+            <!-- Modal Trigger -->
+            <a class="waves-effect waves-light btn modal-trigger" style=" display: inline-block;
+    background-color: #FF6A00;
+    justify-self: center;
+    color: #fff !important;
+    border-radius: 32px;" href="#modal1">Ver proveedores </a>
+
+            <!-- Modal Structure -->
+            <div id="modal1" class="modal bottom-sheet">
+                <div class="modal-content">
+                    <h3>Nuestros proveedores</h3>
+                    <div id="list" style="display: inline-flex; padding-top: 10px;">
+                        <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png"
+                                onclick="llevarAuteco()"></li>
+                        <li class="spac"><img src="CSS/IMG/Proveedores/honda.png" onclick="llevarHonda()"></li>
+                        <li><img src="CSS/IMG/Proveedores/BAJAB.png" onclick="llevarBajab()"></li>
                     </div>
-    
-                    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
-                    <script>
-                        document.addEventListener('DOMContentLoaded', function () {
-                            var elems = document.querySelectorAll('.modal');
-                            var instances = M.Modal.init(elems, {}); // Initialize modals with no options
-                        });
-                    </script>
                 </div>
-    
-                <script>
-    
-                    document.addEventListener('DOMContentLoaded', function () {
-                        var elems = document.querySelectorAll('.modal');
-                        var instances = M.Modal.init(elems, options);
-                    });
-    
-                    // Or with jQuery
-    
-                    $(document).ready(function () {
-                        $('.modal').modal();
-                    });
-    
-                    instance.open();
-    
-                    instance.close();
-    
-                    instance.destroy();
-    
-    
-                    function llevarAuteco() {
-                        location.href = "https://www.auteco.com.co/";
-                    }
-    
-                    function llevarHonda() {
-                        location.href = "https://motos.honda.com.co";
-                    }
-    
-                    function llevarBajab() {
-                        location.href = "https://colombia.globalbajaj.com/";
-                    }
-    
-                    function verList() {
-                        {
-                            document.getElementById('Plan__Grupalcta').style.display = "none";
-                            document.getElementById('list').style.display = "block";
-                        }
-                    }
-                </script>
-    
-    
 
-                <figure class="Plan__Grupal__picture">
-                    <img src="CSS/IMG/ClaseGrupal.webp" class="Plan__Grupal__img">
-                </figure>
+                <div class="modal-footer">
+                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">x</a>
+                </div>
             </div>
-        </section>
-        <footer>
-            <img src="">
-            <div class="container">
-              <div class="footer-content">
-                <div class="footer-section">
-                  <h3>TÉRMINOS Y CONDICIONES DEL SERVICIO</h3>
-                  <ul>
+
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+            <script>
+                document.addEventListener('DOMContentLoaded', function () {
+                    var elems = document.querySelectorAll('.modal');
+                    var instances = M.Modal.init(elems, {}); // Initialize modals with no options
+                });
+            </script>
+        </div>
+
+        <script>
+
+            document.addEventListener('DOMContentLoaded', function () {
+                var elems = document.querySelectorAll('.modal');
+                var instances = M.Modal.init(elems, options);
+            });
+
+            // Or with jQuery
+
+            $(document).ready(function () {
+                $('.modal').modal();
+            });
+
+
+
+            instance.close();
+
+            instance.destroy();
+
+
+            function llevarAuteco() {
+                location.href = "https://www.auteco.com.co/";
+            }
+
+            function llevarHonda() {
+                location.href = "https://motos.honda.com.co";
+            }
+
+            function llevarBajab() {
+                location.href = "https://colombia.globalbajaj.com/";
+            }
+
+            function verList() {
+                {
+                    document.getElementById('Plan__Grupalcta').style.display = "none";
+                    document.getElementById('list').style.display = "block";
+                }
+            }
+        </script>
+
+
+
+        <figure class="Plan__Grupal__picture">
+            <img src="CSS/IMG/ClaseGrupal.webp" class="Plan__Grupal__img">
+        </figure>
+    </div>
+</section>
+<footer>
+    <img src="">
+    <div class="container">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h3>TÉRMINOS Y CONDICIONES DEL SERVICIO</h3>
+                <ul>
                     <li><i class="fas fa-phone"></i> Contrato Usuario 2023</li>
                     <li><i class="fas fa-envelope"></i> Contrato Usuario 2022</li>
                     <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2023</li>
                     <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2022</li>
                     <li><i class="fas fa-map-marker-alt"></i> Politica de privacidad</li>
-                  </ul>
-                </div>
-                <div class="footer-section">
-                  <h3>CONTACTO</h3>
-                  <ul>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>CONTACTO</h3>
+                <ul>
                     <li><i class="fas fa-phone"></i> 3208162801</li>
                     <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
                     <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
-                  </ul>
-                </div>
-              </div>
-              <div class="footer-bottom">
-                <p>&copy; 2023 Todos los derechos reservados | Taller JM | By: Cristian</p>
-              </div>
+                </ul>
             </div>
-          </footer>           
-          
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 Todos los derechos reservados | Taller JM </p>
+        </div>
+    </div>
+</footer>
+
 </body>
+
 </html>
