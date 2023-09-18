@@ -81,21 +81,38 @@
 
                         <section class="form1" id="modal1" style="display: none; background-color: #f2f2f2 !important;" >
                         
-                        <h1 class="h1T">Registrarse</h1>
-                        <form>
-                            <label for="nombre">Nombre:</label>
-                            <input type="text" id="nombre" name="nombre" required>
+                            
+                        </style>
+                    </head>
+                    <body>
+                      <div class=" container "></div>
+                      <section class="row form">
+                        <div class=" col s12 m4 l12"> <!-- Note that "m4 l3" was added -->
+                        <h1 class= "flow-text h1T">Registrarse</h1>
+                        <form method="POST">
+                      
+                          <div class="divider"></div>
+                          <div class="section">
+                          <label for="nombre">Nombre:</label>
+                          <input type="text" id="nombre" name="nombre" required>
+                          
+                    
+                          <div class="section">
+                          <label for="telefono">telefono:</label>
+                          <input type="tel" id="telefono" name="telefono" required>
                         
-                            <label for="telefono">Teléfono:</label>
-                            <input type="tel" id="telefono" name="telefono" required>
-                        
-                            <label for="correo">Correo:</label>
-                            <input type="email" id="correo" name="correo" required>
-                        
-                            <input type="submit" value="Enviar" onclick="hiddenRegister()">
+                    
+                          <div class="section"> 
+                          <label for="correo">correo:</label>
+                          <input type="text" id="correo" name="correo" required>
+                      
+                      
+                      
+                          <input  type="submit" onclick="showAlertInscripcion()" href="login.htmle" value="Enviar">
                         </form>
-                        </section>
-                        <script>
+                      </section>
+                      <script>
+                      
                             const registrarBtn = document.getElementById('registrarBtn');
                             const modal1 = document.getElementById('modal1');
 
@@ -129,7 +146,7 @@
                             }
                         
                             .form1 {
-                            height: 400px;
+                            height: 500px;
                             border-radius: 3px;
                             }
                         
@@ -170,7 +187,7 @@
                         
                             input[type="text"][readonly] {
                             cursor: pointer;
-                            background-color: #f2f2f2;
+                            background-color: #ffffff;
                             }
                             
                             button {
@@ -178,7 +195,7 @@
                             top: 0;
                             right: 0;
                             padding: 5px;
-                            background-color: #ccc;
+                            background-color: #ffffff;
                             border: none;
                             border-radius: 0 4px 4px 0;
                             cursor: pointer;
