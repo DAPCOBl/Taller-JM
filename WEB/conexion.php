@@ -1,13 +1,22 @@
 <?php
 
-$servername = "localhost";
-$username = "root";
-$password = "";
-$database = "jm";
+class Cconexion{
 
-$conn = new mysqli($servername, $username, $password, $database);
-
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
+    static function ConexionBD(){
+        $host ='localhost';
+        $dbname= 'jm';
+        $username='root';
+        $pasword='';
+        
+        try {
+            $conn = new PDO ("mysql:host=$host;dbname=$dbname",$username,$pasword);
+            echo "BD conectada";
+        } catch (PDOException $exp) {
+            echo ("BD NO conectada, $exp");
+        }
+        return $conn;
+        
+    }
 }
+
 ?>
