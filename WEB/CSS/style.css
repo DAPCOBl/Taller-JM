@@ -13,6 +13,10 @@ label{
     color: #333 !important;
 }
 
+.plan__servicesText a{
+    color: #333 !important;
+}
+
 [type="checkbox"]:not(:checked), [type="checkbox"]:checked {
     position: absolute;
     pointer-events: none;
@@ -75,7 +79,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100%;
+    height: 90%;
     background-image: linear-gradient(180deg, #0000008c 0%, #0000008c 100%), url(IMG/Fondo.jpeg);
     background-size: cover;
     clip-path: polygon(0 0, 100% 0, 100% 85%, 70% 95%, 30% 95%, 0 85%);
@@ -179,7 +183,7 @@ body {
 }
 
 .hero__paragraph {
-    margin-bottom: 100px !important;
+    margin-bottom: 150px !important;
 }
 
 .cta{
@@ -582,7 +586,7 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     overflow: hidden;
-    height: 600px;
+    height: 460px;
     margin-bottom: 80px;
 }
 
