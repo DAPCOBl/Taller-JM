@@ -1,0 +1,257 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>perfil</title>
+        <link rel="shortcut icon" href="CSS/IMG/LOGO.png" type="image/x-icon">
+        <link rel="stylesheet" href="CSS\style.css">   
+             
+    </head>
+<body>
+    <div class="perfilADMIN-card">
+        <div class="card">
+            <div class="img">
+                <svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                    <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                    <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                  </svg>
+            </div>
+            <div class="content">
+                <h2 id="nombre">Cristian Granados</h2>
+                <p>Administrador</p>
+                <div class="center">
+                    <div class="box">                    
+                        <p id="telefono">Telefono :3144553884 </p>
+                        <p id="correo">Correo: AdminCristian@gmail.com</p>
+                        <p>Estado   : Activo</p>
+                    </div>
+                </div>
+                <button class="btn" id="abrir">Editar perfil</button>
+                <button class="btn regr" id="abrir" onclick="regr()">Regresar</button>
+            </div>
+            </div>
+            <div id="miModal" class="modal">
+                <div class="flex" id="flex">
+                    <div class="contenido-modal">
+                        <div class="Contenedor-inputs nom">
+                            <div class="inputs">
+                              Nombre <input type="text" id="nombreInput" required>
+                            </div>
+                        </div>
+                        <div class="Contenedor-inputs">
+                            <div class="inputs">
+                                Telefono <input type="number" id="telefonoInput" required>
+                            </div>
+                        </div>
+                        <div class="Contenedor-inputs">
+                            <div class="inputs">
+                                Correo <input type="email" id="correoInput" required>
+                            </div>
+                        </div>
+                        <button class="btnCan1" onclick="cancelar()">Cancelar</button>
+                        <button class="btnAgre1" onclick="agregarProducto()">Guardar</button>
+                    </div>
+                </div>
+            </div>
+            
+            <script>
+                function regr(){
+                    window.location.href = 'indexADMIN.html';
+                }
+
+                function cancelar(){
+                    modal.style.display = 'none';x
+                }
+            
+                function agregarProducto() {
+                    var nombreInput = document.getElementById("nombreInput");
+                    var telefonoInput = document.getElementById("telefonoInput");
+                    var correoInput = document.getElementById("correoInput");
+                    var nombre = document.getElementById("nombre");
+                    var telefono = document.getElementById("telefono");
+                    var correo = document.getElementById("correo");
+            
+                    // Validar que los campos estén completos
+                    if (nombreInput.value === '' || telefonoInput.value === '' || correoInput.value === '') {
+                        alert('Por favor, complete todos los campos.');
+                        return;
+                    }
+                    
+                    // Obtener los nuevos valores de los campos de entrada
+                    var nuevoNombre = nombreInput.value;
+                    var nuevoTelefono = telefonoInput.value;
+                    var nuevoCorreo = correoInput.value;
+            
+                    // Actualizar los elementos HTML con los nuevos valores
+                    nombre.innerHTML = nuevoNombre;
+                    telefono.innerHTML = "Telefono: " + nuevoTelefono;
+                    correo.innerHTML = "Correo: " + nuevoCorreo;
+                }
+            </script>
+            
+            
+    <style>
+        .btnAgre1{
+            margin-bottom: 10px;
+        }
+
+        .nom{
+            margin-top: 20px;
+        }
+
+        .btnAgre1,
+        .btnCan1{    
+            align-self: flex-end;
+            margin-top: 10px;
+            margin-left: 90px;
+            width: 100px;
+            background-color: #FF6A00;
+            height: 40px;
+            padding: 15px; 
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+
+        .Contenedor-inputs{
+            display: flex;
+            width: 0 !important;
+        }
+    </style>
+    <script>
+        let modal = document.getElementById('miModal');
+        let flex = document.getElementById('flex');
+        let abrir = document.getElementById('abrir');
+        let cerrar = document.getElementById('close');
+
+        abrir.addEventListener('click', function(){
+            modal.style.display = 'block';
+        });
+
+        cerrar.addEventListener('click', function(){
+            modal.style.display = 'none';
+        });
+
+        window.addEventListener('click', function(e){
+            console.log(e.target);
+            if(e.target == flex){
+                modal.style.display = 'none';
+            }
+        });
+    </script>
+    <style>
+        .perfil-card{
+            margin-top: 25vb;
+        }
+
+        .regr{
+            margin-top: 15px;
+        }
+.card{
+    margin-top: 300px;
+    justify-content: center;
+    margin: auto;
+    width: 320px;
+    height: 480px;
+    background: #fff;
+    border-radius: 10px;
+    position: relative;
+    display: flex;    
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.13);
+}
+.card::before{
+    content: "";
+    position: absolute;
+    top: 2%;
+    width: 95%;
+    height: 120px;
+    z-index: 1;
+    border-radius: 10px 10px 0 0 ;
+    background-color: #FF6A00;
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.13);
+}
+.card .img{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    z-index: 10;
+    transform: translateY(50px);
+    border: 10px solid #fff;
+    overflow: hidden;
+    position: absolute;
+    background: #fff;
+}
+.card .img img{
+    width: 120%;
+    height: 120%;
+    transform: translate(-8%,-8%);
+}
+.content{
+    margin-top: 20px;
+    width: 100%;
+    height: 100%;
+    transform: translateY(170px);
+    display: flex;
+    flex-direction: column;
+    z-index: 20;
+    align-items: center;
+}
+
+.content p{
+    margin:  0 0;
+}
+.center{
+    width: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 20px;
+}
+.box{
+    padding: 10px 30px;
+    border-radius: 10px;
+    text-align: left;
+}
+
+.btn{
+    width: 95%;
+    padding: 10px;
+    border-radius: 10px;
+    outline: none;
+    border: none;
+    transform: translateY(10px);
+    background-color: #FF6A00;
+    color: #fff;
+    font-weight: 600;
+    box-shadow: 0 0 20px rgba(0, 0,0, 0.13);
+    cursor: pointer;
+}
+.modal{
+	display: none;
+	position: fixed;
+	z-index:100;
+	overflow: auto;
+	left: 0;
+	top:0;
+	width: 100%;
+	height:10000px;
+	background: rgba(0, 0, 0, 0.452);
+}
+/****************************************************************************/
+.contenido-modal{
+    display: grid;
+	align-items: center;
+	background-color: #fefefe;
+	margin: auto;
+	width: 280px;    
+	box-shadow: 0 0 6px 0 rgba(0, 0, 0, .4);
+}
+
+.contenido-modal .Contenedor-inputs{
+    
+    align-items: center;
+    margin-left:40px;
+    background-color: #fefefe;    
+}
+    </style>
+</body>
+</html>
