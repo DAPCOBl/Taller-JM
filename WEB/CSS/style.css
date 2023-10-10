@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap');
 @import url("https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap");
   
+.fontNegr{
+    font-weight: 600 !important;
+}
+
 *{
     padding: 0px;
     margin: 0px;
@@ -179,6 +183,7 @@ body {
 }
 
 .hero__paragraph {
+    margin-top: 50px !important;
     margin-bottom: 100px !important;
 }
 
@@ -577,12 +582,21 @@ input[id="3"]:checked ~ .pagination .pagination-item[for="3"]{
   
 /********************************************************Plan__Grupal ********************************************************/
 
+.Text{
+    color: #000 !important;
+    text-justify: inter-word !important;
+}
+
+.serv{
+    margin-top: 28px;
+}
+
 .Plan__Grupal {
     background-color: #f5f8ff;
     background-size: 20px 20px;
     background-position: 0 0, 10px 10px;
     overflow: hidden;
-    height: 600px;
+    height: 300px;
     margin-bottom: 80px;
 }
 
@@ -625,6 +639,11 @@ footer {
     padding: 20px 20px;
   }
   
+.conta{
+    margin-top: 40px !important;
+    margin-bottom: 25px !important;
+}
+
   .container {
     margin: 0 auto;
     padding: 0 20px;
@@ -1141,5 +1160,44 @@ input[type="checkbox" i] {
     .hero::before {
         clip-path: polygon(0 0, 100% 0, 100% 100%, 0 100%);
         height: 500px;
+    }
+}
+
+@media (max-width: 1150px) {
+    .conta{
+        margin-top: 60px !important;
+        margin-bottom: 40px !important;
+    }
+}
+
+@media (max-width: 1000px) {
+    .conta{
+        margin-top: 40px !important;
+        margin-bottom: 25px !important;
+    }
+}
+
+@media (max-width: 1250px) {
+    .hero__paragraph {
+        margin-top: 40px !important;
+        margin-bottom: 90px !important;
+    }
+}
+
+@media (min-width: 1250px) {
+    .Plan__Grupal {
+        height: 320px;
+    }
+}
+
+@media (min-width: 1350px) {
+    .Plan__Grupal {
+        height: 360px;
+    }
+}
+
+@media (min-width: 1450px) {
+    .Plan__Grupal {
+        height: 400px;
     }
 }

@@ -19,12 +19,12 @@
     <header class="hero">
         <nab class="nab container">
             <div class="nab__logo">
-                <h2 class="nab__title">JM</h2>
+                <h2 class="nab__title fontNegr">JM</h2>
             </div>
             <ul class="nab__link nab__link--menu">
 
                 <li class="nab__items">
-                    <h5><a class="nab__links" onclick="scrollToElement('.sedes');M.toast({html: 'Mira nuestras Sedes'})">Sedes</a></h5>
+                    <h5><a class="nab__links fontNegr" onclick="scrollToElement('.sedes');M.toast({html: 'Mira nuestras Sedes'})">Sedes</a></h5>
                     <script>
                         function scrollToElement(className) {
                             var element = document.querySelector(className);
@@ -39,7 +39,7 @@
                 </li>
 
                 <li class="nab__items">
-                    <h5><a class="nab__links" onclick="scrollToElement('.plan__services');M.toast({html: 'Mira nuestros Servicios'})">Servicios</a></h5></a>
+                    <h5><a class="nab__links fontNegr" onclick="scrollToElement('.plan__services');M.toast({html: 'Mira nuestros Servicios'})">Servicios</a></h5></a>
 
                     <script>
                         function scrollToElement(className) {
@@ -55,7 +55,7 @@
                 </li>
 
                 <li class="nab__items">
-                    <h5><a class="nab__links" onclick="scrollToElement('.prod');M.toast({html: 'Mira nuestros productos'})">Productos</a></h5></a>
+                    <h5><a class="nab__links fontNegr" onclick="scrollToElement('.prod');M.toast({html: 'Mira nuestros productos'})">Productos</a></h5></a>
 
                     <script>
                         function scrollToElement(className) {
@@ -234,7 +234,7 @@
                         <img src="CSS/IMG/Prod/prod2.webp">
                         <div class=" info">
                             <h5 id="filtroYamaha">Enduro-Nuevo</h5>
-                            <h2>Kit De Arrastre Yamaha</h2>
+                            <h2>Kit De Arrastre</h2>
                             <h3>$129.500</h3>
                             <button class="btn1" onclick="redirecionar()">
                                 Ver producto
@@ -408,7 +408,7 @@
                     <ul class="collapsible-body-text">
                         <li><img src="CSS/IMG/Fuerza.jpg" class="imgServices"></li>
                         <li class="plan__servicesDescrip">
-                            <div class="plan__servicesText"> <a>Nos encargamos de reparación o reemplazo de piezas
+                            <div class="plan__servicesText"> <a class="Text">Nos encargamos de reparación o reemplazo de piezas
                                     defectuosas a desgastadas, ajustes de motor, reparación de sistemas de transmisión,
                                     reparación de sistemas de escape, reparación de sistemas de suspensión, y solución
                                     de problemas eléctricas</a></div>
@@ -422,7 +422,7 @@
                     <ul class="collapsible-body-text">
                         <li><img src="CSS/IMG/Peso.jpg" class="imgServices"></li>
                         <li class="plan__servicesDescrip">
-                            <div class="plan__servicesText"> <a>Nos encargamos de cambios de aceite, cambios de titros
+                            <div class="plan__servicesText"> <a class="Text">Nos encargamos de cambios de aceite, cambios de titros
                                     de aire y de aceite, ajustes de la cadena de transmisión, ajustes de válvulas
                                     limpieza de carburadores o inyectores, y revision general del sistema de frenos</a>
                             </div>
@@ -436,11 +436,9 @@
                     <ul class="collapsible-body-text">
                         <li><img src="CSS/IMG/Estiramiento.jpg" class="imgServices"></li>
                         <li class="plan__servicesDescrip">
-                            <div class="plan__servicesText"> <a>Nos encargamos de identificar una falla en específico o
+                            <div class="plan__servicesText"> <a class="Text">Nos encargamos de identificar una falla en específico o
                                     situaciones anormales donde elaboramos mediante procedimientos adecuados en los
-                                    cuales plasmamos todos nuestros conocimientos como especialistas en mecánica.
-                                    Llegamos a él enumerando y comprobando todas las posibles causas que llevan al mal
-                                    funcionamiento o avería descrita.</a></div>
+                                    cuales plasmamos todos nuestros conocimientos como especialistas en mecánica.</a></div>
                         </li>
                     </ul>
                 </div>
@@ -453,7 +451,7 @@
     <section class="Plan__Grupal" style="margin-top: 100px !important;">
         <div class="Plan__Grupal__container container">
             <div class="Plan__Grupal__Text">
-                <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
+                <h2 class="subtitle serv fontNegr">NUESTROS PROVEEDORES</h2>
                 <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los
                     recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de
                     manera eficiente. </p>
@@ -468,7 +466,7 @@
                 <!-- Modal Structure -->
                 <div id="modal1" class="modal bottom-sheet">
                     <div class="modal-content">
-                        <h3>Nuestros proveedores</h3>
+                        <h3 class="fontNegr">Nuestros proveedores</h3>
                         <div id="list" style="display: inline-flex; padding-top: 10px;">
                             <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png"
                                     onclick="llevarAuteco()"></li>
@@ -547,22 +545,20 @@
                     <ul>
                         <li><i class="fas fa-phone"></i> Contrato Usuario 2023</li>
                         <li><i class="fas fa-envelope"></i> Contrato Usuario 2022</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2023</li>
-                        <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2022</li>
                         <li><i class="fas fa-map-marker-alt"></i> Politica de privacidad</li>
                     </ul>
                 </div>
                 <div class="footer-section">
-                    <h3>CONTACTO</h3>
+                    <h3 class = "conta">CONTACTO</h3>
                     <ul>
-                        <li><i class="fas fa-phone"></i> 3208162801</li>
-                        <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
+                        <li><i class="fas fa-phone"></i> +57 311 279 9064</li>
+                        <li><i class="fas fa-envelope"></i> TallerJM@servicioJM.com</li>
                         <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
                     </ul>
                 </div>
             </div>
             <div class="footer-bottom">
-                <p>&copy; 2023 Todos los derechos reservados | Taller JM </p>
+                <p>&copy; 2023 Todos los derechos reservados | Taller JM</p>
             </div>
         </div>
     </footer>
