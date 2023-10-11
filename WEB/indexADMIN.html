@@ -28,19 +28,18 @@
                 </li>
                 <li class="nab__items">
                     <h5><a href="index.html" class="nab__links">Cerrar Sesión</a></h5></a>
-                </li>
-                <li class="nab__items perfil-card">
-                    <svg xmlns="http://www.w3.org/2000/svg" onclick="redireccionar()" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
-                        <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
-                        <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
-                      </svg>
-                      
-                      <script>
-                        function redireccionar() {
-                          window.location.href = 'perfilAdmin.html';
-                        }
-                      </script>
-                </li>
+                    <li class="nab__items perfil">
+                        <svg xmlns="http://www.w3.org/2000/svg" onclick="redireccionar()" width="25" height="25" fill="currentColor" class="bi bi-person-circle" viewBox="0 0 16 16">
+                            <path d="M11 6a3 3 0 1 1-6 0 3 3 0 0 1 6 0z"/>
+                            <path fill-rule="evenodd" d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8zm8-7a7 7 0 0 0-5.468 11.37C3.242 11.226 4.805 10 8 10s4.757 1.225 5.468 2.37A7 7 0 0 0 8 1z"/>
+                          </svg>
+                          
+                          <script>
+                            function redireccionar() {
+                              window.location.href = 'perfilJefe.html';
+                            }
+                          </script>
+                    </li>
             </ul>
             <div class="nab__menu">
                 <img src=".IMG/LOGO.png" class="nab__img">
@@ -56,10 +55,10 @@
     <div class="sedes">
         <h1>NUESTRAS SEDES</h1>
         <div class="cuadro">
-            <input type="radio" id="1" name="image-slide" hidden/>
-            <input type="radio" id="2" name="image-slide" hidden/>
-            <input type="radio" id="3" name="image-slide" hidden/>
-    
+            <input type="radio" id="1" name="image-slide" hidden />
+            <input type="radio" id="2" name="image-slide" hidden />
+            <input type="radio" id="3" name="image-slide" hidden />
+
             <div class="slide">
 
                 <div class="item-slide">
@@ -70,7 +69,7 @@
                 </div>
                 <div class="item-slide">
                     <img src="CSS/IMG/img3.jpeg">
-                </div> 
+                </div>
             </div>
 
             <div class="pagination">
@@ -86,8 +85,6 @@
             </div>
         </div>
     </div>
-
-
     <div class="contenedor">
         <div class="titulo">
             <h1>PRODUCTOS DESTACADOS</h1>
@@ -97,102 +94,102 @@
                 <img src="CSS/IMG/Prod/prod1.webp" alt="lahistoriasecretadelmundo">
                 <div class="hover-galeria">
                     <img src="CSS/IMG/icono1.png" alt="">
-                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                    <a href="#" style="color:white">Ver repuesto </a>
                 </div>
             </div>
             <div class="imagen-port">
                 <img src="CSS/IMG/Prod/prod2.webp" alt="">
                 <div class="hover-galeria">
                     <img src="CSS/IMG/icono1.png" alt="">
-                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                    <a href="detalleProduct.html" style="color:white">Ver repuesto </a>
                 </div>
             </div>
             <div class="imagen-port">
                 <img src="CSS/IMG/Prod/prod3.webp" alt="">
                 <div class="hover-galeria">
                     <img src="CSS/IMG/icono1.png" alt="">
-                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                    <a href="#" style="color:white">Ver repuesto </a>
                 </div>
             </div>
             <div class="imagen-port">
                 <img src="CSS/IMG/Prod/prod4.webp" alt="">
                 <div class="hover-galeria">
                     <img src="CSS/IMG/icono1.png" alt="">
-                    <a href= "HistoriaSecretadelMundo.html" style ="color:white">Ver repuesto </a> 
+                    <a href="#" style="color:white">Ver repuesto </a>
                 </div>
             </div>
         </div>
     </div>
 
-<div class="prod">
-    <h1>NUESTROS PRODUCTOS</h1>
-    <div class = "catalogo">
-        <div class = "filtro">
-            <div class = "filtrar">
-                <h2>FILTRAR POR</h2>
-            </div>
-            <div class = "Marca">
-                <h4>Marca<br>
-                    <div class="checkon">
-                        <input type="checkbox" id="Yamaha" onclick = "filtrar()" value="Yamaha"/>
-                        <label for="Yamaha">Yamaha</label><br>
-                    </div>
-                <div class="checkon">
-                    <input type="checkbox" class = "check" id="Honda"  value="Honda" />
-                    <label for="Honda">Honda</label><br>
+    <div class="prod">
+        <h1>NUESTROS PRODUCTOS</h1>
+        <div class="catalogo">
+            <div class="filtro">
+                <div class="filtrar">
+                    <h2>FILTRAR POR</h2>
                 </div>
-                <div class="checkon">
-                    <input type="checkbox" id="Apache"  value="Apache" />
-                    <label for="Apache">Apache</label><br>
+                <div class="Marca">
+                    <h4>Marca<br>
+                        <div class="checkon">
+                            <input type="checkbox" id="Yamaha" onclick="filtrar()" value="Yamaha" />
+                            <label for="Yamaha">Yamaha</label><br>
+                        </div>
+                        <div class="checkon">
+                            <input type="checkbox" class="check" id="Honda" value="Honda" />
+                            <label for="Honda">Honda</label><br>
+                        </div>
+                        <div class="checkon">
+                            <input type="checkbox" id="Apache" value="Apache" />
+                            <label for="Apache">Apache</label><br>
+                        </div>
+                    </h4>
                 </div>
-                </h4>
-            </div>
 
-            <div class = "Categoria">
-                <h4>Categoria<br>
-                <div class="checkon">
-                    <input type="checkbox" class = "check" id="Trail"  value="Trail" />
-                    <label for="Trail">Trail</label><br>
+                <div class="Categoria">
+                    <h4>Categoria<br>
+                        <div class="checkon">
+                            <input type="checkbox" class="check" id="Trail" value="Trail" />
+                            <label for="Trail">Trail</label><br>
+                        </div>
+                        <div class="checkon">
+                            <input type="checkbox" id="Enduro" checked value="Enduro" />
+                            <label for="Enduro">Enduro</label><br>
+                        </div>
+                        <div class="checkon">
+                            <input type="checkbox" id="Pista" value="Pista" />
+                            <label for="Pista">Pista</label><br>
+                        </div>
+                    </h4>
                 </div>
-                <div class="checkon">
-                    <input type="checkbox" id="Enduro" checked value="Enduro" />
-                    <label for="Enduro">Enduro</label><br>
+                <div class="Condicion">
+                    <h4>Condicion<br>
+                        <div class="checkon">
+                            <input type="checkbox" class="check" id="Nuevos" checked value="Nuevos" />
+                            <label for="Nuevos">Nuevos</label><br>
+                        </div>
+                        <div class="checkon">
+                            <input type="checkbox" id="Usado" value="Usado" />
+                            <label for="Usado">Usado</label><br>
+                        </div>
+                        <div class="checkon">
+                            <input type="checkbox" id="Reacondicionado" value="Reacondicionado" />
+                            <label for="Reacondicionado">Reacondicionado</label><br>
+                        </div>
+                    </h4>
                 </div>
-                <div class="checkon">
-                    <input type="checkbox" id="Pista"  value="Pista" />
-                    <label for="Pista">Pista</label><br>
-                </div>
-                </h4>
+
+
+
             </div>
-            <div class = "Condicion">
-                <h4>Condicion<br>
-                    <div class="checkon">
-                        <input type="checkbox" class = "check" id="Nuevos" checked value="Nuevos" />
-                        <label for="Nuevos">Nuevos</label><br>
-                    </div>
-                <div class="checkon">
-                    <input type="checkbox" id="Usado"  value="Usado" />
-                    <label for="Usado">Usado</label><br>
-                </div>
-                <div class="checkon">
-                    <input type="checkbox" id="Reacondicionado"  value="Reacondicionado" />
-                    <label for="Reacondicionado">Reacondicionado</label><br>
-                </div>
-                </h4>
-            </div>
-
-
-
-        </div>
-           <div class = "cards">
+            <div class="cards">
                 <div class="NoYamaha">
-                    <div class = "card">
+                    <div class="card">
                         <img src="CSS/IMG/Prod/prod1.webp" alt="">
-                        <div class = "info">
-                            <h5 >Enduro-Nuevo</h5>
+                        <div class="info">
+                            <h5>Enduro-Nuevo</h5>
                             <h2>Amortiguadores Libero</h2>
                             <h3>$121.000</h3>
-                            <button class = "btn1">
+                            <button class="btn1">
                                 Ver producto
                             </button>
                             </a>
@@ -200,13 +197,13 @@
                     </div>
                 </div>
                 <div class="ProdYamaha">
-                    <div class = "card">
-                        <img src="CSS/IMG/Prod/prod2.webp" alt="">
-                        <div class = "info">
+                    <div class="card" style="height: 484px !important;">
+                        <img src="CSS/IMG/Prod/prod2.webp">
+                        <div class="info">
                             <h5 id="filtroYamaha">Enduro-Nuevo</h5>
-                            <h2>Kit De Arrastre Yamaha</h2>
+                            <h2>Kit De Arrastre</h2>
                             <h3>$129.500</h3>
-                            <button class = "btn1">
+                            <button class="btn1" onclick="redirecionar()">
                                 Ver producto
                             </button>
                             </a>
@@ -214,13 +211,13 @@
                     </div>
                 </div>
                 <div class="NoYamaha">
-                    <div class = "card">
+                    <div class="card">
                         <img src="CSS/IMG/Prod/prod3.webp" alt="">
-                        <div class = "info">
-                            <h5 >Enduro-Nuevo</h5>
+                        <div class="info">
+                            <h5>Enduro-Nuevo</h5>
                             <h2>Carburador Bws100</h2>
                             <h3>$205.000</h3>
-                            <button class = "btn1">
+                            <button class="btn1">
                                 Ver producto
                             </button>
                             </a>
@@ -254,263 +251,284 @@
                     </div>
                 </div>
                 <div class="NoYamaha">
-                    <div class = "card">
+                    <div class="card">
                         <img src="CSS/IMG/Prod/prod6.webp" alt="">
-                        <div class = "info">
-                            <h5 >Enduro-Nuevo</h5>
+                        <div class="info">
+                            <h5>Enduro-Nuevo</h5>
                             <h2>Campana Trasera</h2>
                             <h3>$247.000</h3>
-                          
-                            <button class = "btn1">
+
+                            <button class="btn1">
                                 Ver producto
                             </button>
                             </a>
                         </div>
                     </div>
                 </div>
-                <div class="cargar NoYamaha"  >
-                    <button class = "btnmas" id = "btnmas" onclick = "cargar()">
+                <div class="cargar NoYamaha">
+                    <button class="btnmas" id="btnmas" onclick="cargar()">
                         Ver más Productos
                     </button>
                 </div>
-                <div class="mas" id = "mas">
-                <div class="NoYamaha">
-                    <div class = "cardmas" id = "cardmas">
-                        <img src="CSS/IMG/Prod/prod7.webp" alt="">
-                        <div class = "info">
-                            <h5 >Enduro-Nuevo</h5>
-                            <h2>Bujía Iridium</h2>
-                            <h3>$70.000</h3>
-                          
-                            <button class = "btn1">
-                                Ver producto
-                            </button>
-                            </a>
+                <div class="mas" id="mas">
+                    <div class="NoYamaha">
+                        <div class="cardmas" id="cardmas">
+                            <img src="CSS/IMG/Prod/prod7.webp" alt="">
+                            <div class="info">
+                                <h5>Enduro-Nuevo</h5>
+                                <h2>Bujía Iridium</h2>
+                                <h3>$70.000</h3>
+
+                                <button class="btn1">
+                                    Ver producto
+                                </button>
+                                </a>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="NoYamaha">
-                <div class = "cardmas" id = "cardmas">
-                    <img src="CSS/IMG/Prod/prod8.webp" alt="">
-                    <div class = "info">
-                        <h5 >Enduro-Nuevo</h5>
-                        <h2>Correa Motor</h2>
-                        <h3>$148.000</h3>
-                      
-                        <button class = "btn1">
-                            Ver producto
-                        </button>
-                        </a>
+                    <div class="NoYamaha">
+                        <div class="cardmas" id="cardmas">
+                            <img src="CSS/IMG/Prod/prod8.webp" alt="">
+                            <div class="info">
+                                <h5>Enduro-Nuevo</h5>
+                                <h2>Correa Motor</h2>
+                                <h3>$148.000</h3>
+
+                                <button class="btn1">
+                                    Ver producto
+                                </button>
+                                </a>
+                            </div>
+                        </div>
                     </div>
-                     </div>
+
                 </div>
-                
+                <script>
+                    function filtrar() {
+                        let checkbox = document.getElementById("Yamaha");
+                        let elementosModificados = document.querySelectorAll(".info h5[id^='filtroYamaha']");
+
+                        if (checkbox.checked) {
+                            elementosModificados.forEach(function (elemento) {
+                                elemento.innerHTML = "Yamaha-Enduro-Nuevo";
+                            });
+                            document.querySelectorAll('.NoYamaha').forEach(function (elemento) {
+                                elemento.style.display = "none ";
+                            });
+                        } else {
+                            elementosModificados.forEach(function (elemento) {
+                                elemento.innerHTML = "Enduro-Nuevo";
+                            });
+                            document.querySelectorAll('.NoYamaha').forEach(function (elemento) {
+                                elemento.style.display = "flex";
+                            });
+                            document.querySelectorAll('.NoYamaha').forEach(function (elemento) {
+                                document.getElementById("NoYamaha").removeAttribute("display");
+                            });
+                        };
+                    }
+
+                    function cargar() {
+                        {
+                            document.getElementById('btnmas').style.display = "none";
+                            document.getElementById('mas').style.display = "flex";
+                        }
+                    }
+
+                    function redirecionar() {
+                        window.location.href = 'detalleProduct.html';
+                    }
+
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var elems = document.querySelectorAll('.collapsible');
+                        var instances = M.Collapsible.init(elems, {});
+
+                        var collapsibleInstance = M.Collapsible.getInstance(elems[0]);
+
+                        // Escucha el evento de apertura del elemento
+                        elems[0].addEventListener('click', function () {
+                            if (collapsibleInstance.isOpen(0)) {
+                                // Cambia el color del título cuando se abre
+                                var header = document.querySelector('.collapsible-header');
+                                header.style.color = '#FF6A00';
+                            } else {
+                                // Restaura el color del título cuando se cierra
+                                var header = document.querySelector('.collapsible-header');
+                                header.style.color = '#333';
+                            }
+                        });
+                    });
+
+                </script>
+            </div>
         </div>
-<script>
-    function filtrar() {
-        let checkbox = document.getElementById("Yamaha");
-        let elementosModificados = document.querySelectorAll(".info h5[id^='filtroYamaha']");
-        
-        if (checkbox.checked) {
-            elementosModificados.forEach(function(elemento) {
-                elemento.innerHTML = "Yamaha-Enduro-Nuevo";
-            });
-            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
-                elemento.style.display = "none ";
-        });
-        } else {
-            elementosModificados.forEach(function(elemento) {
-                elemento.innerHTML = "Enduro-Nuevo";
-            });
-            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
-            elemento.style.display = "flex";
-            });
-            document.querySelectorAll('.NoYamaha').forEach(function(elemento) {
-                document.getElementById("NoYamaha").removeAttribute("display");
-            });
-        };
-    }
-    
-    function cargar(){
-        {
-            document.getElementById('btnmas').style.display = "none";
-            document.getElementById('mas').style.display = "flex";
-        }
-    }
-</script>
     </div>
-</div>
-</div>
-    
-< <section class="plan__services">
 
-    <h1 class="subtitle">SERVICIOS</h1>
+    <section class="plan__services">
 
-    <ul class="plan__services collapsible" style=" margin-top: 50px;">
-        <li>
-            <div class="collapsible-header">Reparaciones mecánicas</div>
-            <div class="collapsible-body services">
-                <ul class="collapsible-body-text">
-                    <li><img src="CSS/IMG/Fuerza.jpg" class="imgServices"></li>
-                    <li class="plan__servicesDescrip">
-                        <div class="plan__servicesText"> <a>Nos encargamos de reparación o reemplazo de piezas
-                                defectuosas a desgastadas, ajustes de motor, reparación de sistemas de transmisión,
-                                reparación de sistemas de escape, reparación de sistemas de suspensión, y solución
-                                de problemas eléctricas</a></div>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="collapsible-header collapsible-border">Mantenimiento programado</div>
-            <div class="collapsible-body services">
-                <ul class="collapsible-body-text">
-                    <li><img src="CSS/IMG/Peso.jpg" class="imgServices"></li>
-                    <li class="plan__servicesDescrip">
-                        <div class="plan__servicesText"> <a>Nos encargamos de cambios de aceite, cambios de titros
-                                de aire y de aceite, ajustes de la cadena de transmisión, ajustes de válvulas
-                                limpieza de carburadores o inyectores, y revision general del sistema de frenos</a>
+        <h1 class="subtitle">SERVICIOS</h1>
+
+        <ul class="plan__services collapsible" style=" margin-top: 50px;">
+            <li>
+                <div class="collapsible-header">Reparaciones mecánicas</div>
+                <div class="collapsible-body services">
+                    <ul class="collapsible-body-text">
+                        <li><img src="CSS/IMG/Fuerza.jpg" class="imgServices"></li>
+                        <li class="plan__servicesDescrip">
+                            <div class="plan__servicesText"> <a class="Text">Nos encargamos de reparación o reemplazo de piezas
+                                    defectuosas a desgastadas, ajustes de motor, reparación de sistemas de transmisión,
+                                    reparación de sistemas de escape, reparación de sistemas de suspensión, y solución
+                                    de problemas eléctricas</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header collapsible-border">Mantenimiento programado</div>
+                <div class="collapsible-body services">
+                    <ul class="collapsible-body-text">
+                        <li><img src="CSS/IMG/Peso.jpg" class="imgServices"></li>
+                        <li class="plan__servicesDescrip">
+                            <div class="plan__servicesText"> <a class="Text">Nos encargamos de cambios de aceite, cambios de titros
+                                    de aire y de aceite, ajustes de la cadena de transmisión, ajustes de válvulas
+                                    limpieza de carburadores o inyectores, y revision general del sistema de frenos</a>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+            <li>
+                <div class="collapsible-header">Servicio de diagnostico</div>
+                <div class="collapsible-body services">
+                    <ul class="collapsible-body-text">
+                        <li><img src="CSS/IMG/Estiramiento.jpg" class="imgServices"></li>
+                        <li class="plan__servicesDescrip">
+                            <div class="plan__servicesText"> <a class="Text">Nos encargamos de identificar una falla en específico o
+                                    situaciones anormales donde elaboramos mediante procedimientos adecuados en los
+                                    cuales plasmamos todos nuestros conocimientos como especialistas en mecánica.</a></div>
+                        </li>
+                    </ul>
+                </div>
+            </li>
+        </ul>
+
+
+    </section>
+
+    <section class="Plan__Grupal" style="margin-top: 100px !important;">
+        <div class="Plan__Grupal__container container">
+            <div class="Plan__Grupal__Text">
+                <h2 class="subtitle serv fontNegr">NUESTROS PROVEEDORES</h2>
+                <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los
+                    recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de
+                    manera eficiente. </p>
+
+                <!-- Modal Trigger -->
+                <a class="waves-effect waves-light btn modal-trigger" style=" display: inline-block;
+        background-color: #FF6A00;
+        justify-self: center;
+        color: #fff !important;
+        border-radius: 32px;" href="#modal1">Ver proveedores </a>
+
+                <!-- Modal Structure -->
+                <div id="modal1" class="modal bottom-sheet">
+                    <div class="modal-content">
+                        <h3 class="fontNegr">Nuestros proveedores</h3>
+                        <div id="list" style="display: inline-flex; padding-top: 10px;">
+                            <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png"
+                                    onclick="llevarAuteco()"></li>
+                            <li class="spac"><img src="CSS/IMG/Proveedores/honda.png" onclick="llevarHonda()"></li>
+                            <li><img src="CSS/IMG/Proveedores/BAJAB.png" onclick="llevarBajab()"></li>
                         </div>
-                    </li>
-                </ul>
-            </div>
-        </li>
-        <li>
-            <div class="collapsible-header">Servicio de diagnostico</div>
-            <div class="collapsible-body services">
-                <ul class="collapsible-body-text">
-                    <li><img src="CSS/IMG/Estiramiento.jpg" class="imgServices"></li>
-                    <li class="plan__servicesDescrip">
-                        <div class="plan__servicesText"> <a>Nos encargamos de identificar una falla en específico o
-                                situaciones anormales donde elaboramos mediante procedimientos adecuados en los
-                                cuales plasmamos todos nuestros conocimientos como especialistas en mecánica.
-                                Llegamos a él enumerando y comprobando todas las posibles causas que llevan al mal
-                                funcionamiento o avería descrita.</a></div>
-                    </li>
-                </ul>
-            </div>
-        </li>
-    </ul>
+                    </div>
 
-
-</section>
-
-<section class="Plan__Grupal" style="margin-top: 100px !important;">
-    <div class="Plan__Grupal__container container">
-        <div class="Plan__Grupal__Text">
-            <h2 class="subtitle">NUESTROS PROVEEDORES</h2>
-            <p class="textProvee">Estos proveedores son fundamentales para asegurar que el taller tenga acceso a los
-                recursos necesarios para llevar a cabo las reparaciones y el mantenimiento de las motocicletas de
-                manera eficiente. </p>
-
-            <!-- Modal Trigger -->
-            <a class="waves-effect waves-light btn modal-trigger" style=" display: inline-block;
-    background-color: #FF6A00;
-    justify-self: center;
-    color: #fff !important;
-    border-radius: 32px;" href="#modal1">Ver proveedores </a>
-
-            <!-- Modal Structure -->
-            <div id="modal1" class="modal bottom-sheet">
-                <div class="modal-content">
-                    <h3>Nuestros proveedores</h3>
-                    <div id="list" style="display: inline-flex; padding-top: 10px;">
-                        <li class="spac"><img src="CSS/IMG/Proveedores/Auteco_logo.svg.png"
-                                onclick="llevarAuteco()"></li>
-                        <li class="spac"><img src="CSS/IMG/Proveedores/honda.png" onclick="llevarHonda()"></li>
-                        <li><img src="CSS/IMG/Proveedores/BAJAB.png" onclick="llevarBajab()"></li>
+                    <div class="modal-footer">
+                        <a href="#!" class="modal-close waves-effect waves-green btn-flat">x</a>
                     </div>
                 </div>
 
-                <div class="modal-footer">
-                    <a href="#!" class="modal-close waves-effect waves-green btn-flat">x</a>
-                </div>
+                <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+                <script>
+                    document.addEventListener('DOMContentLoaded', function () {
+                        var elems = document.querySelectorAll('.modal');
+                        var instances = M.Modal.init(elems, {}); // Initialize modals with no options
+                    });
+                </script>
             </div>
 
-            <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
             <script>
+
                 document.addEventListener('DOMContentLoaded', function () {
                     var elems = document.querySelectorAll('.modal');
-                    var instances = M.Modal.init(elems, {}); // Initialize modals with no options
+                    var instances = M.Modal.init(elems, options);
                 });
-            </script>
-        </div>
 
-        <script>
+                // Or with jQuery
 
-            document.addEventListener('DOMContentLoaded', function () {
-                var elems = document.querySelectorAll('.modal');
-                var instances = M.Modal.init(elems, options);
-            });
-
-            // Or with jQuery
-
-            $(document).ready(function () {
-                $('.modal').modal();
-            });
+                $(document).ready(function () {
+                    $('.modal').modal();
+                });
 
 
 
-            instance.close();
+                instance.close();
 
-            instance.destroy();
+                instance.destroy();
 
 
-            function llevarAuteco() {
-                location.href = "https://www.auteco.com.co/";
-            }
-
-            function llevarHonda() {
-                location.href = "https://motos.honda.com.co";
-            }
-
-            function llevarBajab() {
-                location.href = "https://colombia.globalbajaj.com/";
-            }
-
-            function verList() {
-                {
-                    document.getElementById('Plan__Grupalcta').style.display = "none";
-                    document.getElementById('list').style.display = "block";
+                function llevarAuteco() {
+                    location.href = "https://www.auteco.com.co/";
                 }
-            }
-        </script>
+
+                function llevarHonda() {
+                    location.href = "https://motos.honda.com.co";
+                }
+
+                function llevarBajab() {
+                    location.href = "https://colombia.globalbajaj.com/";
+                }
+
+                function verList() {
+                    {
+                        document.getElementById('Plan__Grupalcta').style.display = "none";
+                        document.getElementById('list').style.display = "block";
+                    }
+                }
+            </script>
 
 
 
-        <figure class="Plan__Grupal__picture">
-            <img src="CSS/IMG/ClaseGrupal.webp" class="Plan__Grupal__img">
-        </figure>
-    </div>
-</section>
-<footer>
-    <img src="">
-    <div class="container">
-        <div class="footer-content">
-            <div class="footer-section">
-                <h3>TÉRMINOS Y CONDICIONES DEL SERVICIO</h3>
-                <ul>
-                    <li><i class="fas fa-phone"></i> Contrato Usuario 2023</li>
-                    <li><i class="fas fa-envelope"></i> Contrato Usuario 2022</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2023</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Contrato Débito Automático 2022</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Politica de privacidad</li>
-                </ul>
+            <figure class="Plan__Grupal__picture">
+                <img src="CSS/IMG/ClaseGrupal.webp" class="Plan__Grupal__img">
+            </figure>
+        </div>
+    </section>
+    <footer>
+        <img src="">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>TÉRMINOS Y CONDICIONES DEL SERVICIO</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> Contrato Usuario 2023</li>
+                        <li><i class="fas fa-envelope"></i> Contrato Usuario 2022</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Politica de privacidad</li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3 class = "conta">CONTACTO</h3>
+                    <ul>
+                        <li><i class="fas fa-phone"></i> +57 311 279 9064</li>
+                        <li><i class="fas fa-envelope"></i> TallerJM@servicioJM.com</li>
+                        <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
+                    </ul>
+                </div>
             </div>
-            <div class="footer-section">
-                <h3>CONTACTO</h3>
-                <ul>
-                    <li><i class="fas fa-phone"></i> 3208162801</li>
-                    <li><i class="fas fa-envelope"></i> Taller JM@servicio.com</li>
-                    <li><i class="fas fa-map-marker-alt"></i> Colombia</li>
-                </ul>
+            <div class="footer-bottom">
+                <p>&copy; 2023 Todos los derechos reservados | Taller JM</p>
             </div>
         </div>
-        <div class="footer-bottom">
-            <p>&copy; 2023 Todos los derechos reservados | Taller JM </p>
-        </div>
-    </div>
-</footer>
+    </footer>
 
 </body>
 
